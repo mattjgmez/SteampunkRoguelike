@@ -21,7 +21,7 @@ public class Character : MonoBehaviour
 
     protected virtual void Initialization()
     {
-
+        _characterAbilities = GetComponents<CharacterAbility>();
     }
 
     protected void Update()
