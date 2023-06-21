@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Character))]
 public class CharacterAbility : MonoBehaviour
 {
     /// the sound fx to play when the ability starts

@@ -9,6 +9,8 @@ public class Character : MonoBehaviour
 
     /// Is the character player-controlled or controlled by an AI ?
     public CharacterTypes CharacterType = CharacterTypes.AI;
+    // Used if the character is player controller. The PlayerID must match the Input Manager's PlayerID.
+    public string PlayerID = "";
 
     public GameObject CharacterModel;
 
