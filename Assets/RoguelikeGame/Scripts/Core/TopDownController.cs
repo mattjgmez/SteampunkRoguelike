@@ -28,7 +28,7 @@ public class TopDownController : MonoBehaviour
         Initialization();
     }
 
-    private void Initialization()
+    protected virtual void Initialization()
     {
         _controller = GetComponent<CharacterController>();
         _transform = transform;
@@ -36,17 +36,17 @@ public class TopDownController : MonoBehaviour
         _collider = GetComponent<Collider>();
     }
 
-    protected void Update()
+    protected virtual void Update()
     {
         HandleMovement();
     }
 
-    protected void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         ApplyImpact();
     }
 
-    private void HandleMovement()
+    protected virtual void HandleMovement()
     {
         // Get WASD input
         float moveX = InputManager.Instance.PrimaryMovement.x;
@@ -83,5 +83,29 @@ public class TopDownController : MonoBehaviour
             direction.y = -direction.y;
         }
         _impact += direction.normalized * force;
+    }
+
+    /// <summary>
+    /// Enables the collider
+    /// </summary>
+    public virtual void CollisionsOn()
+    {
+        _collider.enabled = true;
+    }
+
+    /// <summary>
+    /// Disables collider
+    /// </summary>
+    public virtual void CollisionsOff()
+    {
+        _collider.enabled = false;
+    }
+
+    /// <summary>
+    /// Resets all values for this controller, though currently only resets Impact
+    /// </summary>
+    public virtual void Reset()
+    {
+        _impact = Vector3.zero;
     }
 }
