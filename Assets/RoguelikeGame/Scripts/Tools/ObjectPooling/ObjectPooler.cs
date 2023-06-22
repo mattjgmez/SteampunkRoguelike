@@ -49,7 +49,7 @@ public class ObjectPooler : MonoBehaviour
     /// <returns>The name of the object pool.</returns>
     protected virtual string DetermineObjectPoolName()
     {
-        return $"[ObjectPooler] {this.name}";
+        return $"[{this.GetType()}] {this.name}";
     }
 
     public virtual void FillObjectPool()

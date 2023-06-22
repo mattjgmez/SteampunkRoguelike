@@ -9,16 +9,16 @@ public class DamageOnTouch : MonoBehaviour
 
     public void ClearIgnoreList()
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     public void IgnoreGameObject(GameObject gameObject)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     public void StopIgnoringObject(GameObject gameObject)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 }

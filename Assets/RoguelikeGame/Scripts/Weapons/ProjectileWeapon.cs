@@ -58,6 +58,7 @@ public class ProjectileWeapon : Weapon
 
         for (int i = 0; i < ProjectilesPerShot; i++)
         {
+            //Debug.Log($"{this.GetType()}.WeaponUse: Spawning Projectile.", gameObject);
             SpawnProjectile(SpawnPosition, i, ProjectilesPerShot, true);
         }
     }

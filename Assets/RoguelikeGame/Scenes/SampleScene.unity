@@ -303,7 +303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259404055}
   m_LocalRotation: {x: 0.38268346, y: -0.00000002248122, z: 0.000000009312027, w: 0.92387956}
-  m_LocalPosition: {x: 0.0000010045086, y: 20.64045, z: -20.640446}
+  m_LocalPosition: {x: 0.00000051619145, y: 10.606603, z: -10.606601}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -354,8 +354,9 @@ GameObject:
   m_Component:
   - component: {fileID: 368211270}
   - component: {fileID: 368211271}
+  - component: {fileID: 368211272}
   m_Layer: 0
-  m_Name: WeaponHandler
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,21 +390,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DelayBeforeUse: 0
-  DelayBeforeUseReleaseInterruption: 1
+  DelayBeforeUseReleaseInterruption: 0
   TimeBetweenUses: 0.5
-  TimeBetweenUsesReleaseInterruption: 1
-  MagazineBased: 1
+  TimeBetweenUsesReleaseInterruption: 0
+  MagazineBased: 0
   MagazineSize: 6
   ReloadTime: 2
   AmmoConsumedPerShot: 1
   CurrentAmmoLoaded: 0
   RecoilForce: 0
   InitializeOnStart: 1
+  Interruptable: 0
   ProjectileSpawnOffset: {x: 0, y: 1, z: 0.5}
   ProjectilesPerShot: 1
   Spread: {x: 0, y: 0, z: 0}
   RandomSpread: 0
   SpawnPosition: {x: 0, y: 1, z: 0.5}
+--- !u!114 &368211272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368211269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81ec1c300d1eb0549b4768be301271dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MutualizeWaitingPools: 0
+  NestWaitingPool: 1
+  ObjectToPool: {fileID: 9101938788830094235, guid: 255cf8818603ff74d909556671780466, type: 3}
+  PoolCount: 20
+  PoolCanExpand: 1
 --- !u!1 &694536872
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.38268346, y: -0.00000002248122, z: 0.000000009312027, w: 0.92387956}
-  m_LocalPosition: {x: 0.0000010045086, y: 20.64045, z: -20.640446}
+  m_LocalPosition: {x: 0.00000051619145, y: 10.606603, z: -10.606601}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -757,6 +776,7 @@ GameObject:
   - component: {fileID: 1335084016}
   - component: {fileID: 1335084018}
   - component: {fileID: 1335084019}
+  - component: {fileID: 1335084020}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -856,8 +876,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterType: 0
-  PlayerID: 
+  PlayerID: Player
   CharacterModel: {fileID: 170615871}
+  SendStateChangeEvents: 1
+  SendStateUpdateEvents: 1
 --- !u!114 &1335084019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,6 +896,28 @@ MonoBehaviour:
   AbilityInProgressSfx: {fileID: 0}
   AbilityStopSfx: {fileID: 0}
   RotationSpeed: 20
+--- !u!114 &1335084020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335084012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 170b9bf2bd3646349a55484c2bcb6131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  ContinuousPress: 0
+  GettingHitInterruptsAttack: 0
+  BufferInput: 0
+  NewInputExtendsBuffer: 0
+  MaxBufferDuration: 0.25
+  ProjectileSpawn: {fileID: 0}
+  CurrentWeapon: {fileID: 368211271}
 --- !u!1 &1475157003
 GameObject:
   m_ObjectHideFlags: 3
@@ -941,7 +985,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 29.19
+  m_CameraDistance: 15
   m_DeadZoneWidth: 0.054
   m_DeadZoneHeight: 0.105
   m_DeadZoneDepth: 0
@@ -1036,7 +1080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1940839719}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: WeaponHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

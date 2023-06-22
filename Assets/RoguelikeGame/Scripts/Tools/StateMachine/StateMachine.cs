@@ -73,6 +73,8 @@ namespace Phoenix.Tools
         /// <param name="newState">The new state to change to.</param>
         public virtual void ChangeState(T newState)
         {
+            //Debug.Log($"{this.GetType()}.ChangeState: Changing state to {newState}.");
+
             if (newState.Equals(CurrentState)) { return; }
 
             PreviousState = CurrentState;

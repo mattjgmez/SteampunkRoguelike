@@ -16,7 +16,8 @@ public class Weapon : MonoBehaviour
         WeaponStop,
         WeaponReloadStart,
         WeaponReload,
-        WeaponReloadStop
+        WeaponReloadStop,
+        WeaponInterrupted
     }
 
     [Header("Use")]
@@ -44,9 +45,11 @@ public class Weapon : MonoBehaviour
     [Header("Recoil")]
     public float RecoilForce = 0f;
 
-    [Header("PreInitialization")]
+    [Header("Settings")]
     /// If this is true, the weapon will initialize itself on start, otherwise it'll have to be init manually, usually by the CharacterHandleWeapon class
     public bool InitializeOnStart = false;
+    /// Controls if the weapon can be interrupted or not.
+    public bool Interruptable = false;
 
     /// the weapon's owner
     public Character Owner { get; protected set; }
@@ -100,6 +103,15 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    public virtual void WeaponInputStop()
+    {
+        if (_reloading)
+        {
+            return;
+        }
+        _triggerReleased = true;
+    }
+
     /// <summary>
     /// Handle what happens when the weapon starts
     /// </summary>
@@ -131,6 +143,9 @@ public class Weapon : MonoBehaviour
             case WeaponStates.WeaponUse:
                 CaseWeaponUse();
                 break;
+            case WeaponStates.WeaponDelayBetweenUses:
+                CaseWeaponDelayBetweenUses();
+                break;
             case WeaponStates.WeaponStop:
                 CaseWeaponStop();
                 break;
@@ -143,6 +158,10 @@ public class Weapon : MonoBehaviour
                 break;
             case WeaponStates.WeaponReloadStop:
                 CaseWeaponReloadStop();
+                break;
+
+            case WeaponStates.WeaponInterrupted:
+                CaseWeaponInterrupted();
                 break;
         }
     }
@@ -247,11 +266,30 @@ public class Weapon : MonoBehaviour
         CurrentAmmoLoaded = MagazineSize;
     }
 
+    public virtual void CaseWeaponInterrupted()
+    {
+        TurnWeaponOff();
+        WeaponState.ChangeState(WeaponStates.WeaponIdle);
+    }
+
+    /// <summary>
+    /// Call this method to interrupt the weapon
+    /// </summary>
+    public virtual void Interrupt()
+    {
+        if (Interruptable)
+        {
+            WeaponState.ChangeState(WeaponStates.WeaponInterrupted);
+        }
+    }
+
     #endregion
 
     public virtual void ShootRequest()
     {
         if (_reloading) return;
+
+        //Debug.Log($"{this.GetType()}.ShootRequest: Shot requested.", gameObject);
 
         if (MagazineBased)
         {
@@ -265,6 +303,10 @@ public class Weapon : MonoBehaviour
                 InitiateReloadWeapon();
             }
         }
+        else
+        {
+            WeaponState.ChangeState(WeaponStates.WeaponUse);
+        }
     }
 
     /// <summary>
@@ -272,6 +314,7 @@ public class Weapon : MonoBehaviour
     /// </summary>
     public virtual void WeaponUse()
     {
+        //Debug.Log($"{this.GetType()}.WeaponUse: WeaponUse called.", gameObject);
         // apply recoil
         if (RecoilForce > 0f && _controller != null && Owner != null)
         {
@@ -285,11 +328,13 @@ public class Weapon : MonoBehaviour
     /// </summary>
     public virtual void TurnWeaponOff()
     {
-        if ((WeaponState.CurrentState == WeaponStates.WeaponIdle) || (WeaponState.CurrentState == WeaponStates.WeaponStop))
+        if ((WeaponState.CurrentState == WeaponStates.WeaponIdle || WeaponState.CurrentState == WeaponStates.WeaponStop))
         {
             return;
         }
         _triggerReleased = true;
+
+        Debug.Log($"{this.GetType()}.TurnWeaponOff: Attempting to change state to WeaponStop.", gameObject);
 
         WeaponState.ChangeState(WeaponStates.WeaponStop);
     }

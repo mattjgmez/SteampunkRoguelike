@@ -2,6 +2,7 @@ using Phoenix.Tools;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Weapon;
 
 public class InputManager : Singleton<InputManager>
 {
@@ -94,16 +95,17 @@ public class InputManager : Singleton<InputManager>
     {
         foreach (PInput.Button button in ButtonList)
         {
-            if (Input.GetButton(button.ButtonID))
-            {
-                button.TriggerButtonPressed();
-            }
             if (Input.GetButtonDown(button.ButtonID))
             {
                 button.TriggerButtonDown();
             }
+            if (Input.GetButton(button.ButtonID))
+            {
+                button.TriggerButtonPressed();
+            }
             if (Input.GetButtonUp(button.ButtonID))
             {
+                Debug.Log($"{this.GetType()}.GetInputButtons: {button}.TriggerButtonUp called.", gameObject);
                 button.TriggerButtonUp();
             }
         }
