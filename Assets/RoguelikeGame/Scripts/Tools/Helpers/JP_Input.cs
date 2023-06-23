@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Phoenix.Tools
+namespace JadePhoenix.Tools
 {
-    public class PInput : MonoBehaviour
+    public class JP_Input : MonoBehaviour
     {
         public enum ButtonStates { Off, ButtonDown, ButtonPressed, ButtonUp }
 
@@ -44,7 +44,7 @@ namespace Phoenix.Tools
 
         public class Button
         {
-            public StateMachine<PInput.ButtonStates> State { get; protected set; }
+            public StateMachine<JP_Input.ButtonStates> State { get; protected set; }
             public string ButtonID;
 
             public delegate void ButtonDownMethodDelegate();
@@ -61,15 +61,15 @@ namespace Phoenix.Tools
                 ButtonDownMethod = down;
                 ButtonPressedMethod = pressed;
                 ButtonUpMethod = up;
-                State = new StateMachine<PInput.ButtonStates>(null, false);
-                State.ChangeState(PInput.ButtonStates.Off);
+                State = new StateMachine<JP_Input.ButtonStates>(null, false);
+                State.ChangeState(JP_Input.ButtonStates.Off);
             }
 
             public virtual void TriggerButtonDown()
             {
                 if (ButtonDownMethod == null)
                 {
-                    State.ChangeState(PInput.ButtonStates.ButtonDown);
+                    State.ChangeState(JP_Input.ButtonStates.ButtonDown);
                 }
                 else
                 {
@@ -81,7 +81,7 @@ namespace Phoenix.Tools
             {
                 if (ButtonPressedMethod == null)
                 {
-                    State.ChangeState(PInput.ButtonStates.ButtonPressed);
+                    State.ChangeState(JP_Input.ButtonStates.ButtonPressed);
                 }
                 else
                 {
@@ -93,7 +93,7 @@ namespace Phoenix.Tools
             {
                 if (ButtonUpMethod == null)
                 {
-                    State.ChangeState(PInput.ButtonStates.ButtonUp);
+                    State.ChangeState(JP_Input.ButtonStates.ButtonUp);
                 }
                 else
                 {

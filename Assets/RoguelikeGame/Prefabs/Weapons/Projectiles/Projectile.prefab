@@ -152,6 +152,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7312a3c467950c4cb22276e2433179b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Model: {fileID: 2353953180812004609}
+  CurrentHealth: 0
+  Invulnerable: 0
+  MaxHealth: 1
+  InitialHealth: 1
+  ImmuneToKnockback: 0
+  DestroyOnDeath: 1
+  DelayBeforeDestruction: 1
+  PointsWhenDestroyed: 0
+  RespawnAtInitialLocation: 0
+  DisableControllerOnDeath: 1
+  DisableModelOnDeath: 1
+  DisableCollisionsOnDeath: 1
 --- !u!114 &9101938788830094233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +177,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79aa66b763fb44a429474df78fc1a7b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 9984
+  PerfectImpact: 0
+  DamageCaused: 10
+  DamageCausedKnockbackType: 1
+  DamageCausedKnockbackDirection: 0
+  DamageCausedKnockbackForce: {x: 10, y: 2, z: 10}
+  InvincibilityDuration: 0.1
+  DamageTakenEveryTime: 1
+  DamageTakenDamageable: 1
+  DamageTakenNonDamageable: 1
+  DamageTakenKnockbackType: 0
+  DamageTakenKnockbackDirection: 0
+  DamageTakenKnockbackForce: {x: 0, y: 0, z: 0}
+  DamageTakenInvincibilityDuration: 0.5
   Owner: {fileID: 0}
 --- !u!136 &9101938788830094232
 CapsuleCollider:

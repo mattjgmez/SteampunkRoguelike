@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TopDownController : MonoBehaviour
 {
+    public Vector3 Speed;
+    public Vector3 AddedForce;
+
     [Header("Physics")]
     // the speed at which external forces get lerped to zero
     public float ImpactFalloff = 5f;
@@ -16,6 +19,7 @@ public class TopDownController : MonoBehaviour
 
     public float MovementSpeed = 6.0f;
 
+    protected Vector3 _positionLastFrame;
     protected Transform _transform;
     protected Rigidbody _rigidBody;
     protected Collider _collider;
@@ -46,6 +50,11 @@ public class TopDownController : MonoBehaviour
         ApplyImpact();
     }
 
+    protected virtual void LateUpdate()
+    {
+        ComputeSpeed();
+    }
+
     protected virtual void HandleMovement()
     {
         // Get WASD input
@@ -70,6 +79,18 @@ public class TopDownController : MonoBehaviour
         _impact = Vector3.Lerp(_impact, Vector3.zero, ImpactFalloff * Time.deltaTime);
     }
 
+    protected virtual void ComputeSpeed()
+    {
+        Speed = (this.transform.position - _positionLastFrame) / Time.deltaTime;
+        // we round the speed to 2 decimals
+        Speed.x = Mathf.Round(Speed.x * 100f) / 100f;
+        Speed.y = Mathf.Round(Speed.y * 100f) / 100f;
+        Speed.z = Mathf.Round(Speed.z * 100f) / 100f;
+        _positionLastFrame = this.transform.position;
+    }
+
+    #region PUBLIC METHODS
+
     /// <summary>
     /// Use this to apply an impact to a controller, moving it in the specified direction at the specified force
     /// </summary>
@@ -78,11 +99,20 @@ public class TopDownController : MonoBehaviour
     public virtual void Impact(Vector3 direction, float force)
     {
         direction = direction.normalized;
-        if(direction.y < 0)
+        if (direction.y < 0)
         {
             direction.y = -direction.y;
         }
         _impact += direction.normalized * force;
+    }
+
+    /// <summary>
+    /// Adds the specified force to the controller
+    /// </summary>
+    /// <param name="movement"></param>
+    public virtual void AddForce(Vector3 movement)
+    {
+        AddedForce += movement;
     }
 
     /// <summary>
@@ -102,10 +132,14 @@ public class TopDownController : MonoBehaviour
     }
 
     /// <summary>
-    /// Resets all values for this controller, though currently only resets Impact
+    /// Resets all values for this controller
     /// </summary>
     public virtual void Reset()
     {
         _impact = Vector3.zero;
+        Speed = Vector3.zero;
+        AddedForce = Vector3.zero;
     }
+
+    #endregion
 }

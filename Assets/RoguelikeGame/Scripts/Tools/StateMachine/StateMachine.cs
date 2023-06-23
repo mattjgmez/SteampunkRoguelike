@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Phoenix.Tools
+namespace JadePhoenix.Tools
 {
     /// <summary>
     /// Struct representing a state change event in a state machine.

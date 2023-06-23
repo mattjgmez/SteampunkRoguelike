@@ -5,7 +5,7 @@ using System.Diagnostics.Tracing;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
-namespace Phoenix.Tools
+namespace JadePhoenix.Tools
 {
     public struct GameEvent
     {

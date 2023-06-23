@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Phoenix.Tools
+namespace JadePhoenix.Tools
 {
     public class PersistentSingleton<T> : MonoBehaviour where T : Component
     {
