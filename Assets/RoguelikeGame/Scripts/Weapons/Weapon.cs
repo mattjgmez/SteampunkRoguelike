@@ -1,4 +1,4 @@
-using Phoenix.Tools;
+using JadePhoenix.Tools;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -334,7 +334,7 @@ public class Weapon : MonoBehaviour
         }
         _triggerReleased = true;
 
-        Debug.Log($"{this.GetType()}.TurnWeaponOff: Attempting to change state to WeaponStop.", gameObject);
+        //Debug.Log($"{this.GetType()}.TurnWeaponOff: Attempting to change state to WeaponStop.", gameObject);
 
         WeaponState.ChangeState(WeaponStates.WeaponStop);
     }

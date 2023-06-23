@@ -1,4 +1,4 @@
-using Phoenix.Tools;
+using JadePhoenix.Tools;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -65,13 +65,13 @@ public class CharacterWeaponHandler : CharacterAbility
             return;
         }
 
-        if (_inputManager.ShootButton.State.CurrentState == PInput.ButtonStates.ButtonDown)
+        if (_inputManager.ShootButton.State.CurrentState == JP_Input.ButtonStates.ButtonDown)
         {
             //Debug.Log($"{this.GetType()}.HandleInput: Got button down, ShootStart called.", gameObject);
             ShootStart();
         }
 
-        if (_inputManager.ShootButton.State.CurrentState == PInput.ButtonStates.ButtonUp)
+        if (_inputManager.ShootButton.State.CurrentState == JP_Input.ButtonStates.ButtonUp)
         {
             Debug.Log($"{this.GetType()}.HandleInput: Got button up, ShootStop called.", gameObject);
             ShootStop();
@@ -80,7 +80,7 @@ public class CharacterWeaponHandler : CharacterAbility
         if (CurrentWeapon != null)
         {
             if (CurrentWeapon.WeaponState.CurrentState == Weapon.WeaponStates.WeaponDelayBetweenUses
-            && _inputManager.ShootButton.State.CurrentState == PInput.ButtonStates.Off)
+            && _inputManager.ShootButton.State.CurrentState == JP_Input.ButtonStates.Off)
             {
                 CurrentWeapon.WeaponInputStop();
             }

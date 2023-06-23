@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Phoenix.Tools
+namespace JadePhoenix.Tools
 {
-    public static class MyMath
+    public static class JP_Math
     {
         /// <summary>
         /// Remaps a value x in interval [A,B], to the proportional value in interval [C,D]

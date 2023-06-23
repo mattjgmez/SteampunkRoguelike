@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Phoenix.Tools;
+using JadePhoenix.Tools;
 
 public class ProjectileWeapon : Weapon
 {
@@ -109,9 +109,9 @@ public class ProjectileWeapon : Weapon
             {
                 if (totalProjectiles > 1)
                 {
-                    _randomSpreadDirection.x = MyMath.Remap(projectileIndex, 0, totalProjectiles - 1, -Spread.x, Spread.x);
-                    _randomSpreadDirection.y = MyMath.Remap(projectileIndex, 0, totalProjectiles - 1, -Spread.y, Spread.y);
-                    _randomSpreadDirection.z = MyMath.Remap(projectileIndex, 0, totalProjectiles - 1, -Spread.z, Spread.z);
+                    _randomSpreadDirection.x = JP_Math.Remap(projectileIndex, 0, totalProjectiles - 1, -Spread.x, Spread.x);
+                    _randomSpreadDirection.y = JP_Math.Remap(projectileIndex, 0, totalProjectiles - 1, -Spread.y, Spread.y);
+                    _randomSpreadDirection.z = JP_Math.Remap(projectileIndex, 0, totalProjectiles - 1, -Spread.z, Spread.z);
                 }
                 else
                 {
