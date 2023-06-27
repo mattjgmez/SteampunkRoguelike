@@ -316,7 +316,7 @@ public class Weapon : MonoBehaviour
     {
         //Debug.Log($"{this.GetType()}.WeaponUse: WeaponUse called.", gameObject);
         // apply recoil
-        if (RecoilForce > 0f && _controller != null && Owner != null)
+        if (RecoilForce != 0f && _controller != null && Owner != null)
         {
             _controller.Impact(-this.transform.forward, RecoilForce);
         }

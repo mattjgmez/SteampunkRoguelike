@@ -16,9 +16,9 @@ public class CharacterWeaponHandler : CharacterAbility
     public bool BufferInput;
     public bool NewInputExtendsBuffer;
     public float MaxBufferDuration = .25f;
+
     /// the position from which projectiles will be spawned (can be safely left empty)
     public Transform ProjectileSpawn;
-
     public Weapon CurrentWeapon;
 
     protected float _fireTimer = 0f;

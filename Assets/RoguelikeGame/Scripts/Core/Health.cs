@@ -177,7 +177,7 @@ public class Health : MonoBehaviour
         if (DisableControllerOnDeath && (_controller != null))
         {
             _controller.enabled = false;
-            //_controller.SetKinematic(true);
+            //_characterController.SetKinematic(true);
         }
 
         if (DisableControllerOnDeath && (_characterController != null))
