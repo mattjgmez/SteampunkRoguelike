@@ -1,0 +1,11 @@
+[0706/161037.766:INFO:CONSOLE(1)] "%cUnhandled rejection Error: unknown exception type
+    at <anonymous>:1:1
+From previous event:
+    at j.F [as _captureStackTrace] (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-butler/build/external.js:1:15958)
+    at j._resolveFromExecutor (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-butler/build/external.js:1:45082)
+    at new j (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-butler/build/external.js:1:38328)
+    at t.initializeDictionaries (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-butler/build/spaces.js:1:1957)
+    at Object.<anonymous> (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-butler/build/main.js:1:11271)
+    at o (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-butler/build/spaces.js:1:410)
+    at window.webpackJsonp (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-butler/build/spaces.js:1:284)
+    at file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-butler/build/main.js:1:1", source: file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-butler/build/external.js (1)
