@@ -41,6 +41,8 @@ public class CharacterWeaponHandler : CharacterAbility
     {
         _character = GetComponent<Character>();
 
+        if (CurrentWeapon == null) { return; }
+
         CurrentWeapon.SetOwner(_character, this);
 
         _projectileWeapon = CurrentWeapon.gameObject.GetComponent<ProjectileWeapon>();
@@ -48,7 +50,6 @@ public class CharacterWeaponHandler : CharacterAbility
         {
             _projectileWeapon.SetProjectileSpawnTransform(ProjectileSpawn);
         }
-        // we turn off the gun's emitters.
         CurrentWeapon.Initialization();
     }
 
