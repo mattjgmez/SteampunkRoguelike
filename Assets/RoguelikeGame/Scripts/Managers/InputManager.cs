@@ -105,7 +105,6 @@ public class InputManager : Singleton<InputManager>
             }
             if (Input.GetButtonUp(button.ButtonID))
             {
-                //Debug.Log($"{this.GetType()}.GetInputButtons: {button}.TriggerButtonUp called.", gameObject);
                 button.TriggerButtonUp();
             }
         }
@@ -125,6 +124,34 @@ public class InputManager : Singleton<InputManager>
                 button.State.ChangeState(JP_Input.ButtonStates.Off);
             }
         }
+    }
+
+    public virtual JP_Input.Button GetButtonFromID(string buttonID)
+    {
+        JP_Input.Button targetButton = null;
+
+        if (ButtonList == null)
+        {
+            Debug.Log($"{this.GetType()}.GetButtonFromList: ButtonList not found.", gameObject);
+            return null;
+        }
+
+        foreach (JP_Input.Button button in ButtonList)
+        {
+            //Debug.Log($"{this.GetType()}.GetButtonFromList: Checking [{button.ButtonID}].", gameObject);
+
+            if (button.ButtonID == $"{PlayerID}_{buttonID}")
+            {
+                targetButton = button;
+            }
+        }
+
+        if ( targetButton == null )
+        {
+            Debug.LogWarning($"{this.GetType()}.GetButtonFromList: [{PlayerID}_{buttonID}] not found.", gameObject);
+        }
+
+        return targetButton;
     }
 
     #region BUTTON EVENT METHODS

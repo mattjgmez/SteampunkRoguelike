@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
     public enum FacingDirections { West, East, North, South }
     /// the possible directions you can force your character to look at after its spawn
     public enum SpawnFacingDirections { Default, Left, Right, Up, Down }
-    /// the possible character types : player _controller or AI (controlled by the computer)
+    /// the possible character types : player _characterController or AI (controlled by the computer)
     public enum CharacterTypes { Player, AI }
     /// Is the character player-controlled or controlled by an AI ?
     public CharacterTypes CharacterType = CharacterTypes.AI;

@@ -16,9 +16,9 @@ public class CharacterWeaponHandler : CharacterAbility
     public bool BufferInput;
     public bool NewInputExtendsBuffer;
     public float MaxBufferDuration = .25f;
+
     /// the position from which projectiles will be spawned (can be safely left empty)
     public Transform ProjectileSpawn;
-
     public Weapon CurrentWeapon;
 
     protected float _fireTimer = 0f;
@@ -41,6 +41,8 @@ public class CharacterWeaponHandler : CharacterAbility
     {
         _character = GetComponent<Character>();
 
+        if (CurrentWeapon == null) { return; }
+
         CurrentWeapon.SetOwner(_character, this);
 
         _projectileWeapon = CurrentWeapon.gameObject.GetComponent<ProjectileWeapon>();
@@ -48,7 +50,6 @@ public class CharacterWeaponHandler : CharacterAbility
         {
             _projectileWeapon.SetProjectileSpawnTransform(ProjectileSpawn);
         }
-        // we turn off the gun's emitters.
         CurrentWeapon.Initialization();
     }
 
