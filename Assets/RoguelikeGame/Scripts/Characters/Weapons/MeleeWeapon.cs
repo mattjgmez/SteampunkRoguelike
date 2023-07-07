@@ -69,7 +69,7 @@ public class MeleeWeapon : Weapon
         if (DamageAreaShape == MeleeDamageAreaShapes.Sphere)
         {
             _sphereCollider = _damageArea.AddComponent<SphereCollider>();
-            _sphereCollider.center = this.transform.position + this.transform.rotation * AreaOffset;
+            _sphereCollider.center = AreaOffset;
             _sphereCollider.radius = AreaSize.x / 2;
             _damageAreaCollider = _sphereCollider;
             _damageAreaCollider.isTrigger = true;

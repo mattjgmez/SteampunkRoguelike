@@ -35,6 +35,8 @@ public class Character : MonoBehaviour
 
     public InputManager LinkedInputManager { get; protected set; }
 
+    public GameObject CameraTarget;
+
     protected CharacterAbility[] _characterAbilities;
     protected Health _health;
     protected bool _spawnDirectionForced = false;

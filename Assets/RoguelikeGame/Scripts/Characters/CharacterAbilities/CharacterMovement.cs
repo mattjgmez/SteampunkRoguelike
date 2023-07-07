@@ -146,6 +146,12 @@ public class CharacterMovement : CharacterAbility
         _controller.SetMovement(_movementVector);
     }
 
+    public virtual void SetMovement(Vector2 value)
+    {
+        _horizontalMovement = value.x;
+        _verticalMovement = value.y;
+    }
+
     protected override void HandleInput()
     {
         if (InputAuthorized)

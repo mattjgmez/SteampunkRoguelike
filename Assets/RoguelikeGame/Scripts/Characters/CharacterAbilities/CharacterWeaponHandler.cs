@@ -21,7 +21,10 @@ public class CharacterWeaponHandler : CharacterAbility
     public Transform ProjectileSpawn;
     public Weapon CurrentWeapon;
 
+    public WeaponAim WeaponAimComponent { get { return _weaponAim; } }
+
     protected float _fireTimer = 0f;
+    protected WeaponAim _weaponAim;
     protected ProjectileWeapon _projectileWeapon;
     protected float _bufferTimer = 0f;
     protected bool _buffering = false;
@@ -44,6 +47,7 @@ public class CharacterWeaponHandler : CharacterAbility
         if (CurrentWeapon == null) { return; }
 
         CurrentWeapon.SetOwner(_character, this);
+        _weaponAim = CurrentWeapon.gameObject.GetComponent<WeaponAim>();
 
         _projectileWeapon = CurrentWeapon.gameObject.GetComponent<ProjectileWeapon>();
         if (_projectileWeapon != null)

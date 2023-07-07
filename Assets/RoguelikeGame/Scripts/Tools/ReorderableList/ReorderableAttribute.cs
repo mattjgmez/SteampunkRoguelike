@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace JadePhoenix.Tools.Inspector
+namespace JadePhoenix.Tools
 {
     public class ReorderableAttribute : PropertyAttribute
     {

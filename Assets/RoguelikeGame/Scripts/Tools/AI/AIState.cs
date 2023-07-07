@@ -1,25 +1,23 @@
-using JadePhoenix.Tools.Inspector;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JadePhoenix.Tools.AI
+namespace JadePhoenix.Tools
 {
-    [Serializable]
+    [System.Serializable]
     public class AIActionsList : ReorderableArray<AIAction> { }
 
-    [Serializable]
+    [System.Serializable]
     public class AITransitionsList : ReorderableArray<AITransition> { }
 
-    [Serializable]
-    public class AIState : MonoBehaviour
+    [System.Serializable]
+    public class AIState
     {
         public string StateName;
 
         [Reorderable(null, "Action", null)]
         public AIActionsList Actions;
-        [Reorderable(null, "Action", null)]
+        [Reorderable(null, "Transition", null)]
         public AITransitionsList Transitions;
 
         protected AIBrain _brain;

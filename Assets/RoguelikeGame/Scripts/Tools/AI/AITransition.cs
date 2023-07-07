@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JadePhoenix.Tools.AI
+namespace JadePhoenix.Tools
 {
     [Serializable]
-    public class AITransition : MonoBehaviour
+    public class AITransition
     {
         /// this transition's decision
         public AIDecision Decision;

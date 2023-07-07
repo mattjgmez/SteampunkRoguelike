@@ -121,9 +121,9 @@ public class DamageOnTouch : MonoBehaviour
     /// <summary>
     /// When colliding, we apply damage
     /// </summary>
-    protected virtual void Colliding(GameObject collider)
+    protected virtual void Colliding(GameObject collision)
     {
-        Debug.Log($"{this.GetType()}.Colliding: Collision detected, triggering method.", gameObject);
+        //Debug.Log($"{this.GetType()}.Colliding: Collision detected, triggering method.", gameObject);
 
         // We keep these if statements seperate for ease of debugging.
         if (!this.isActiveAndEnabled)
@@ -133,16 +133,16 @@ public class DamageOnTouch : MonoBehaviour
         }
 
         // if the object we're colliding with is part of our ignore list, we do nothing and exit
-        if (_ignoredGameObjects.Contains(collider))
+        if (_ignoredGameObjects.Contains(collision))
         {
             Debug.Log($"{this.GetType()}.Colliding: _ignoredGameObjects contains collision.", gameObject);
             return;
         }
 
         // if what we're colliding with isn't part of the target layers, we do nothing and exit
-        if (!JP_Layers.LayerInLayerMask(collider.layer, TargetLayerMask))
+        if (!JP_Layers.LayerInLayerMask(collision.layer, TargetLayerMask))
         {
-            Debug.Log($"{this.GetType()}.Colliding: Collision layer is missing from TargetLayerMask.", gameObject);
+            Debug.Log($"{this.GetType()}.Colliding: Collision layer [{LayerMask.LayerToName(collision.layer)}] is missing from TargetLayerMask.", gameObject);
             return;
         }
 
@@ -153,9 +153,8 @@ public class DamageOnTouch : MonoBehaviour
             return;
         }
 
-
         _collisionPoint = this.transform.position;
-        _colliderHealth = collider.gameObject.GetComponent<Health>();
+        _colliderHealth = collision.gameObject.GetComponent<Health>();
 
         // if what we're colliding with is damageable
         if (_colliderHealth != null)
@@ -165,7 +164,6 @@ public class DamageOnTouch : MonoBehaviour
                 OnCollideWithDamageable(_colliderHealth);
             }
         }
-
         // if what we're colliding with can't be damaged
         else
         {
@@ -314,11 +312,11 @@ public class DamageOnTouch : MonoBehaviour
         {
             if (_sphereCollider.enabled)
             {
-                Gizmos.DrawSphere(this.transform.position, _sphereCollider.radius);
+                Gizmos.DrawSphere(this.transform.position + _gizmoOffset, _sphereCollider.radius);
             }
             else
             {
-                Gizmos.DrawWireSphere(this.transform.position, _sphereCollider.radius);
+                Gizmos.DrawWireSphere(this.transform.position + _gizmoOffset, _sphereCollider.radius);
             }
         }
     }

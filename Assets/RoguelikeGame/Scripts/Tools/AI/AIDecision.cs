@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JadePhoenix.Tools.AI
+namespace JadePhoenix.Tools
 {
     public abstract class AIDecision : MonoBehaviour
     {
