@@ -1,102 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2142792785975769886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5155437467268780616}
-  - component: {fileID: 3087819443126710050}
-  - component: {fileID: 8635303044403283773}
-  - component: {fileID: 196850113100218600}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5155437467268780616
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142792785975769886}
-  m_LocalRotation: {x: -0, y: -0.38268274, z: -0, w: 0.9238798}
-  m_LocalPosition: {x: -13.277979, y: 2.44, z: -13.476513}
-  m_LocalScale: {x: 12.5, y: 5, z: 45}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6159456562378346247}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
---- !u!33 &3087819443126710050
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142792785975769886}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8635303044403283773
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142792785975769886}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &196850113100218600
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2142792785975769886}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2165585711996453887
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,10 +47,106 @@ Transform:
   - {fileID: 5667915263586553213}
   - {fileID: 8054149713018936305}
   - {fileID: 2490251781644450984}
-  - {fileID: 5155437467268780616}
   m_Father: {fileID: 1107827715856455404}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3189825100197191418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3620718115515216987}
+  - component: {fileID: 6602140228510974217}
+  - component: {fileID: 3260195570652662409}
+  - component: {fileID: 47778269831285184}
+  m_Layer: 0
+  m_Name: Cube (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
+  m_IsActive: 1
+--- !u!4 &3620718115515216987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189825100197191418}
+  m_LocalRotation: {x: -0, y: 0.3826828, z: -0, w: 0.92387986}
+  m_LocalPosition: {x: -13.240436, y: 2.4399996, z: -13.224621}
+  m_LocalScale: {x: 45, y: 5, z: 12.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9059196214443410028}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!33 &6602140228510974217
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189825100197191418}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3260195570652662409
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189825100197191418}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 957fc7415e694d14a86b766971c0e756, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &47778269831285184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189825100197191418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4038890874032593691
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +230,7 @@ Transform:
   - {fileID: 3528690623290016833}
   - {fileID: 5313736255882039979}
   - {fileID: 5715119935933559200}
+  - {fileID: 3620718115515216987}
   m_Father: {fileID: 1107827715856455404}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -250,8 +250,8 @@ GameObject:
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &5715119935933559200
 Transform:
@@ -260,14 +260,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6137029009522756140}
-  m_LocalRotation: {x: -0, y: -0.38268274, z: -0, w: 0.9238798}
+  m_LocalRotation: {x: -0, y: 0.3826828, z: -0, w: 0.92387986}
   m_LocalPosition: {x: 11.49705, y: 2.44, z: 11.523468}
-  m_LocalScale: {x: 12.5, y: 5, z: 45}
+  m_LocalScale: {x: 45, y: 5, z: 12.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9059196214443410028}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!33 &3742118382559842028
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -296,7 +296,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 957fc7415e694d14a86b766971c0e756, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -434,7 +434,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &7460409914797480673
 Transform:
@@ -570,6 +570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &354784098503179204 stripped
@@ -631,6 +635,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -694,6 +702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &103772301192739641 stripped
@@ -755,6 +767,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -818,6 +834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &190088867982468738 stripped
@@ -879,6 +899,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -942,6 +966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &990495380067554501 stripped
@@ -1003,6 +1031,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -1066,6 +1098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &958783810898429997 stripped
@@ -1127,6 +1163,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -1190,6 +1230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &794835067034985773 stripped
@@ -1251,6 +1295,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -1314,6 +1362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &1261372299710956182 stripped
@@ -1375,6 +1427,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -1438,6 +1494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &1938317011184459150 stripped
@@ -1499,6 +1559,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -1562,6 +1626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &1993248947344470132 stripped
@@ -1623,6 +1691,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -1686,6 +1758,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &2659385095375546824 stripped
@@ -1747,6 +1823,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -1810,6 +1890,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &2371713087640783296 stripped
@@ -1871,6 +1955,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -1934,6 +2022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &3268090330810162558 stripped
@@ -1995,6 +2087,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -2058,6 +2154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &3091291056060049578 stripped
@@ -2119,6 +2219,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -2182,6 +2286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &3966860008489509500 stripped
@@ -2243,6 +2351,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8063881625032905279, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2310,6 +2422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!1001 &4311511361797943391
@@ -2366,6 +2482,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -2429,6 +2549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &4055651864290842045 stripped
@@ -2490,6 +2614,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -2553,6 +2681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &5510225216487879856 stripped
@@ -2614,6 +2746,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -2677,6 +2813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &5653915247336634528 stripped
@@ -2738,6 +2878,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -2801,6 +2945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &5313736255882039979 stripped
@@ -2862,6 +3010,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -2925,6 +3077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &6098338882192346201 stripped
@@ -2986,6 +3142,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -3049,6 +3209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &5801362656890494611 stripped
@@ -3110,6 +3274,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -3173,6 +3341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &6823233514715038426 stripped
@@ -3234,6 +3406,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -3297,6 +3473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &6427943189532892339 stripped
@@ -3358,6 +3538,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -3421,6 +3605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &6976240115177095750 stripped
@@ -3483,6 +3671,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall Bricks
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: 89c6bae073d46e14fa44f9918e85cd41, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959226857079605727, guid: 89c6bae073d46e14fa44f9918e85cd41, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028406260594073425, guid: 89c6bae073d46e14fa44f9918e85cd41, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574841998536539452, guid: 89c6bae073d46e14fa44f9918e85cd41, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89c6bae073d46e14fa44f9918e85cd41, type: 3}
 --- !u!1001 &7574407434677432317
@@ -3540,6 +3744,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall Bricks
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: 89c6bae073d46e14fa44f9918e85cd41, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959226857079605727, guid: 89c6bae073d46e14fa44f9918e85cd41, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028406260594073425, guid: 89c6bae073d46e14fa44f9918e85cd41, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574841998536539452, guid: 89c6bae073d46e14fa44f9918e85cd41, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89c6bae073d46e14fa44f9918e85cd41, type: 3}
 --- !u!1001 &7737606589510020321
@@ -3596,6 +3816,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -3659,6 +3883,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &7558666722895584822 stripped
@@ -3720,6 +3948,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -3783,6 +4015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &7602070783994143561 stripped
@@ -3844,6 +4080,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -3907,6 +4147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &8489756337129069760 stripped
@@ -3968,6 +4212,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -4031,6 +4279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &8594600743524405350 stripped
@@ -4092,6 +4344,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -4155,6 +4411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &8343628085592404735 stripped
@@ -4216,6 +4476,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -4279,6 +4543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &9011147199530918693 stripped
@@ -4340,6 +4608,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
@@ -4403,6 +4675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iso Wall (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
 --- !u!4 &9217979850477646808 stripped
@@ -4464,6 +4740,10 @@ PrefabInstance:
     - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
       propertyPath: m_Name
       value: Iso Wall (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319782530845206846, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6a017d635f32ee479e9b5df59747399, type: 3}
