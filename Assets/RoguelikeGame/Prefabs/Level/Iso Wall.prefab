@@ -30,7 +30,7 @@ Transform:
   m_Children:
   - {fileID: 2933099512296842571}
   - {fileID: 790379413934498880}
-  - {fileID: 6886565938101293890}
+  - {fileID: 4107140174720519786}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -228,7 +228,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 30.647873, z: 1}
   m_Center: {x: 0, y: 14.823937, z: 0}
---- !u!1001 &6348745368593265833
+--- !u!1001 &4572780104594139521
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -249,7 +249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00000047683716
+      value: 0.00000071525574
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
       propertyPath: m_LocalRotation.w
@@ -283,36 +283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickWallRoof
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
---- !u!1 &6114251771648231928 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
-  m_PrefabInstance: {fileID: 6348745368593265833}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &752216512484021234
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6114251771648231928}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &6886565938101293890 stripped
+--- !u!4 &4107140174720519786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
-  m_PrefabInstance: {fileID: 6348745368593265833}
+  m_PrefabInstance: {fileID: 4572780104594139521}
   m_PrefabAsset: {fileID: 0}
