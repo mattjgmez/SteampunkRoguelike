@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5768232765372529958}
   m_Layer: 0
-  m_Name: Wall 4x4 1
+  m_Name: Wall 4x4 Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -338,6 +338,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d0a95927160bfe1419a967064a9bbe63, type: 3}
       propertyPath: m_Name
       value: Wall 4x4 wall window
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d0a95927160bfe1419a967064a9bbe63, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d0a95927160bfe1419a967064a9bbe63, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0a95927160bfe1419a967064a9bbe63, type: 3}
