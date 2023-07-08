@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 9101938788830094215}
   - component: {fileID: 9101938788830094214}
   - component: {fileID: 9101938788830094233}
-  - component: {fileID: 9101938788830094232}
+  - component: {fileID: 163089059848777595}
   - component: {fileID: 5018437951449525195}
   m_Layer: 0
   m_Name: Projectile
@@ -194,8 +194,8 @@ MonoBehaviour:
   DamageTakenKnockbackForce: {x: 0, y: 0, z: 0}
   DamageTakenInvincibilityDuration: 0.5
   Owner: {fileID: 0}
---- !u!136 &9101938788830094232
-CapsuleCollider:
+--- !u!65 &163089059848777595
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -204,9 +204,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.14
-  m_Height: 1
-  m_Direction: 2
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5018437951449525195
 Rigidbody:

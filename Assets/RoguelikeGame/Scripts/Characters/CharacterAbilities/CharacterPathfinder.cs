@@ -13,7 +13,7 @@ public class CharacterPathfinder : MonoBehaviour
     [Header("Debug")]
     public bool DebugDrawPath;
 
-    public NavMeshPath CurrentPath;
+    public NavMeshPath AgentPath;
     public Vector3[] Waypoints;
     public int NextWaypointIndex;
     public Vector3 NextWaypointDirection;
@@ -26,7 +26,7 @@ public class CharacterPathfinder : MonoBehaviour
 
     protected virtual void Awake()
     {
-        CurrentPath = new NavMeshPath();
+        AgentPath = new NavMeshPath();
         _topDownController = GetComponent<TopDownController>();
         _characterMovement = GetComponent<CharacterMovement>();
     }
@@ -43,9 +43,9 @@ public class CharacterPathfinder : MonoBehaviour
     {
         NextWaypointIndex = 0;
 
-        NavMesh.CalculatePath(startingPos, targetPos, NavMesh.AllAreas, CurrentPath);
-        Waypoints = CurrentPath.corners;
-        if (CurrentPath.corners.Length >= 2) 
+        NavMesh.CalculatePath(startingPos, targetPos, NavMesh.AllAreas, AgentPath);
+        Waypoints = AgentPath.corners;
+        if (AgentPath.corners.Length >= 2) 
         { 
             NextWaypointIndex = 1;
         }
@@ -63,11 +63,11 @@ public class CharacterPathfinder : MonoBehaviour
 
     protected virtual void DrawDebugPath()
     {
-        if (DebugDrawPath)
+        if (DebugDrawPath && AgentPath.corners.Length != 0)
         {
-            for (int i = 0; i < CurrentPath.corners.Length; i++)
+            for (int i = 0; i < AgentPath.corners.Length - 1; i++)
             {
-                Debug.DrawLine(CurrentPath.corners[i], CurrentPath.corners[i + 1], Color.red);
+                Debug.DrawLine(AgentPath.corners[i], AgentPath.corners[i + 1], Color.red);
             }
         }
     }
@@ -84,7 +84,7 @@ public class CharacterPathfinder : MonoBehaviour
             }
             else
             {
-                NextWaypointIndex = -1;
+                NextWaypointIndex = 0;
             }
         }
     }
@@ -112,7 +112,7 @@ public class CharacterPathfinder : MonoBehaviour
         {
             _direction = (Waypoints[NextWaypointIndex] - this.transform.position).normalized;
             _newMovement.x = _direction.x;
-            _newMovement.y = _direction.y;
+            _newMovement.y = _direction.z;
             _characterMovement.SetMovement(_newMovement);
         }
     }

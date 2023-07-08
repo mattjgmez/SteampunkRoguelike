@@ -111,7 +111,7 @@ public class MeleeWeapon : Weapon
     {
         if (_damageAreaCollider != null)
         {
-            Debug.Log($"{this.GetType()}.DisableDamageArea: Disabling _damageAreaCollider.", gameObject);
+            //Debug.Log($"{this.GetType()}.DisableDamageArea: Disabling _damageAreaCollider.", gameObject);
             _damageAreaCollider.enabled = false;
         }
         else

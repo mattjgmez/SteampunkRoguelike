@@ -66,7 +66,7 @@ public class Weapon : MonoBehaviour
     protected bool _triggerReleased = false;
     protected bool _reloading = false;
     protected TopDownController _controller;
-    // protected CharacterMovement _characterMovement;
+    protected CharacterMovement _characterMovement;
 
     protected virtual void Start()
     {
@@ -89,7 +89,7 @@ public class Weapon : MonoBehaviour
         if (Owner != null)
         {
             CharacterWeaponHandler = weaponHandler;
-            //_characterMovement = Owner.GetComponent<CharacterMovement>();
+            _characterMovement = Owner.GetComponent<CharacterMovement>();
             _controller = Owner.GetComponent<TopDownController>();
         }
     }

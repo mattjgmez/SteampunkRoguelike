@@ -95,7 +95,7 @@ namespace JadePhoenix.Tools
                     {
                         if (Transitions[i].TrueState != "")
                         {
-                            Debug.Log($"{this.GetType()}.EvaluateTransitions: Transitioning to {Transitions[i].TrueState}.");
+                            //Debug.Log($"{this.GetType()}.EvaluateTransitions: Transitioning to {Transitions[i].TrueState}.");
 
                             _brain.TransitionToState(Transitions[i].TrueState);
                         }
