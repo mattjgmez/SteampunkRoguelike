@@ -617,6 +617,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Base
       objectReference: {fileID: 0}
+    - target: {fileID: 5448201497565819473, guid: 2e1877b78b43f5c4894f034c4b6a1cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458161788248442075, guid: 2e1877b78b43f5c4894f034c4b6a1cc6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2848663
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458161788248442075, guid: 2e1877b78b43f5c4894f034c4b6a1cc6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458161788248442075, guid: 2e1877b78b43f5c4894f034c4b6a1cc6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.3647385
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e1877b78b43f5c4894f034c4b6a1cc6, type: 3}
 --- !u!4 &8124808491085499399 stripped
