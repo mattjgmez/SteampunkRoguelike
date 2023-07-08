@@ -157,28 +157,28 @@ public class InputManager : Singleton<InputManager>
     #region BUTTON EVENT METHODS
 
     public virtual void ShootButtonDown()               { ShootButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void ShootButtonPressed()            { ShootButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void ShootButtonUp()                 { ShootButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
+    public virtual void ShootButtonPressed()            { ShootButton.State.ChangeState(JP_Input.ButtonStates.ButtonPressed); }
+    public virtual void ShootButtonUp()                 { ShootButton.State.ChangeState(JP_Input.ButtonStates.ButtonUp); }
 
     public virtual void SecondaryShootButtonDown()      { SecondaryShootButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void SecondaryShootButtonPressed()   { SecondaryShootButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void SecondaryShootButtonUp()        { SecondaryShootButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
+    public virtual void SecondaryShootButtonPressed()   { SecondaryShootButton.State.ChangeState(JP_Input.ButtonStates.ButtonPressed); }
+    public virtual void SecondaryShootButtonUp()        { SecondaryShootButton.State.ChangeState(JP_Input.ButtonStates.ButtonUp); }
 
     public virtual void InteractButtonDown()            { InteractButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void InteractButtonPressed()         { InteractButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void InteractButtonUp()              { InteractButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
+    public virtual void InteractButtonPressed()         { InteractButton.State.ChangeState(JP_Input.ButtonStates.ButtonPressed); }
+    public virtual void InteractButtonUp()              { InteractButton.State.ChangeState(JP_Input.ButtonStates.ButtonUp); }
 
     public virtual void MeleeButtonDown()               { MeleeButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void MeleeButtonPressed()            { MeleeButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void MeleeButtonUp()                 { MeleeButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
+    public virtual void MeleeButtonPressed()            { MeleeButton.State.ChangeState(JP_Input.ButtonStates.ButtonPressed); }
+    public virtual void MeleeButtonUp()                 { MeleeButton.State.ChangeState(JP_Input.ButtonStates.ButtonUp); }
 
     public virtual void DodgeButtonDown()               { DodgeButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void DodgeButtonPressed()            { DodgeButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void DodgeButtonUp()                 { DodgeButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
+    public virtual void DodgeButtonPressed()            { DodgeButton.State.ChangeState(JP_Input.ButtonStates.ButtonPressed); }
+    public virtual void DodgeButtonUp()                 { DodgeButton.State.ChangeState(JP_Input.ButtonStates.ButtonUp); }
 
     public virtual void PauseButtonDown()               { PauseButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void PauseButtonPressed()            { PauseButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
-    public virtual void PauseButtonUp()                 { PauseButton.State.ChangeState(JP_Input.ButtonStates.ButtonDown); }
+    public virtual void PauseButtonPressed()            { PauseButton.State.ChangeState(JP_Input.ButtonStates.ButtonPressed); }
+    public virtual void PauseButtonUp()                 { PauseButton.State.ChangeState(JP_Input.ButtonStates.ButtonUp); }
 
     #endregion
 }

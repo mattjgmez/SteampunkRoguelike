@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public enum TriggerModes { SemiAuto, Auto }
     public enum WeaponStates
     {
         WeaponIdle,
@@ -21,6 +22,7 @@ public class Weapon : MonoBehaviour
     }
 
     [Header("Use")]
+    public TriggerModes TriggerMode = TriggerModes.Auto;
     /// the delay before use, that will be applied for every shot
     public float DelayBeforeUse = 0f;
     /// whether or not the delay before used can be interrupted by releasing the shoot button (if true, releasing the button will cancel the delayed shot)
@@ -222,7 +224,14 @@ public class Weapon : MonoBehaviour
         _delayBetweenUsesCounter -= Time.deltaTime;
         if (_delayBetweenUsesCounter <= 0)
         {
-            TurnWeaponOff();
+            if ((TriggerMode == TriggerModes.Auto) && !_triggerReleased)
+            {
+                ShootRequest();
+            }
+            else
+            {
+                TurnWeaponOff();
+            }
         }
     }
 

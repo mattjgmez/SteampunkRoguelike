@@ -63,6 +63,8 @@ namespace JadePhoenix.Tools
 
         public virtual void TransitionToState(string newStateName)
         {
+            Debug.Log($"{this.GetType()}.TransitionToState: Brain transitioning to state [{newStateName}].", gameObject);
+
             if (newStateName != CurrentState.StateName)
             {
                 CurrentState.ExitState();

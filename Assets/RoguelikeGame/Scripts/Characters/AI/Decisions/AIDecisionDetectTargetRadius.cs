@@ -1,7 +1,6 @@
 using JadePhoenix.Tools;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
 /// <summary>

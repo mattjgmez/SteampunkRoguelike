@@ -76,6 +76,14 @@ public class CharacterWeaponHandler : CharacterAbility
             ShootStart();
         }
 
+        if (CurrentWeapon != null)
+        {
+            if ((CurrentWeapon.TriggerMode == Weapon.TriggerModes.Auto) && (_inputManager.ShootButton.State.CurrentState == JP_Input.ButtonStates.ButtonPressed))
+            {
+                ShootStart();
+            }
+        }
+
         if (_inputManager.ShootButton.State.CurrentState == JP_Input.ButtonStates.ButtonUp)
         {
             Debug.Log($"{this.GetType()}.HandleInput: Got button up, ShootStop called.", gameObject);

@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class AIActionMelee : AIAction
 {
-    public bool FaceTarget = true;
     public bool AimAtTarget = false;
     public Vector3 ShootOffset;
 
@@ -29,6 +28,7 @@ public class AIActionMelee : AIAction
     public override void PerformAction()
     {
         MakeChangesToTheWeapon();
+        TestAimAtTarget();
         Shoot();
     }
 
@@ -37,6 +37,34 @@ public class AIActionMelee : AIAction
         if (_characterWeaponHandler.CurrentWeapon != null)
         {
             _characterWeaponHandler.CurrentWeapon.TimeBetweenUsesReleaseInterruption = true;
+        }
+    }
+
+    protected virtual void TestAimAtTarget()
+    {
+        if (!AimAtTarget || (_brain.Target == null))
+        {
+            return;
+        }
+
+        if (_characterWeaponHandler.CurrentWeapon != null)
+        {
+            if (_weaponAim == null)
+            {
+                _weaponAim = _characterWeaponHandler.CurrentWeapon.gameObject.GetComponent<WeaponAim>();
+            }
+
+            if (_weaponAim != null)
+            {
+                if (_meleeWeapon != null)
+                {
+                    _weaponAimDirection = _brain.Target.position + ShootOffset - (_character.transform.position);
+                }
+                else
+                {
+                    _weaponAimDirection = _brain.Target.position + ShootOffset - _character.transform.position;
+                }
+            }
         }
     }
 

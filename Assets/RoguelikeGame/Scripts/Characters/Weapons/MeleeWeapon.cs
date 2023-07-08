@@ -104,7 +104,6 @@ public class MeleeWeapon : Weapon
         }
     }
 
-
     /// <summary>
     /// Disables the damage area.
     /// </summary>
