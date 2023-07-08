@@ -164,6 +164,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickWallRoof (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
 --- !u!1 &2381589224731987308 stripped
@@ -438,6 +446,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickWallRoof
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
 --- !u!1 &6338331162985677134 stripped
@@ -526,6 +542,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickWallRoof (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
 --- !u!1 &6303423439125186696 stripped
@@ -613,6 +637,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
       propertyPath: m_Name
       value: BrickWallRoof (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62d04adb80a07974396dbd75445c4852, type: 3}
