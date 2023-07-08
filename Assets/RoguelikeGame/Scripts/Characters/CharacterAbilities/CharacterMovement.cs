@@ -1,3 +1,4 @@
+using JadePhoenix.Tools;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -33,6 +34,11 @@ public class CharacterMovement : CharacterAbility
     protected Vector2 _lerpedInput = Vector2.zero;
     protected float _acceleration = 0f;
 
+    protected const string _walkingAnimationParameterName = "Walking";
+    protected const string _idleAnimationParameterName = "Idle";
+    protected int _walkingAnimationParameter;
+    protected int _idleAnimationParameter;
+
     protected override void Initialization()
     {
         base.Initialization();
@@ -56,6 +62,12 @@ public class CharacterMovement : CharacterAbility
         {
             _horizontalMovement = 0f;
             _verticalMovement = 0f;
+        }
+
+        if ((_controller.CurrentMovement.magnitude > IdleThreshold)
+        && (_movement.CurrentState == CharacterStates.MovementStates.Idle))
+        {
+            _movement.ChangeState(CharacterStates.MovementStates.Walking);
         }
 
         if (_movement.CurrentState == CharacterStates.MovementStates.Walking
@@ -186,5 +198,19 @@ public class CharacterMovement : CharacterAbility
     {
         ResetSpeed();
         MovementForbidden = false;
+    }
+
+    protected override void InitializeAnimatorParameters()
+    {
+        Debug.Log($"{this.GetType()}.InitializeAnimatorParameters: Called.", gameObject);
+        RegisterAnimatorParameter(_walkingAnimationParameterName, AnimatorControllerParameterType.Bool, out _walkingAnimationParameter);
+        RegisterAnimatorParameter(_idleAnimationParameterName, AnimatorControllerParameterType.Bool, out _idleAnimationParameter);
+    }
+
+    public override void UpdateAnimator()
+    {
+        Debug.Log($"{this.GetType()}.UpdateAnimator: Walking = [{_movement.CurrentState == CharacterStates.MovementStates.Walking}] Idle = [{_movement.CurrentState == CharacterStates.MovementStates.Idle}].", gameObject);
+        JP_AnimatorExtensions.UpdateAnimatorBool(_animator, _walkingAnimationParameter, _movement.CurrentState == CharacterStates.MovementStates.Walking, _character.AnimatorParameters);
+        JP_AnimatorExtensions.UpdateAnimatorBool(_animator, _idleAnimationParameter, _movement.CurrentState == CharacterStates.MovementStates.Idle, _character.AnimatorParameters);
     }
 }

@@ -56,8 +56,9 @@ public class CharacterAbility : MonoBehaviour
 
     protected virtual void Initialization()
     {
+        BindAnimator();
+
         _controller = GetComponent<TopDownController>();
-        _animator = GetComponent<Animator>();
         _health = GetComponent<Health>();
 
         _model = _character.CharacterModel;
@@ -67,6 +68,21 @@ public class CharacterAbility : MonoBehaviour
         _condition = _character.ConditionState;
 
         _abilityInitialized = true;
+    }
+
+    protected virtual void BindAnimator()
+    {
+        if (_character.Animator == null)
+        {
+            _character.AssignAnimator();
+        }
+
+        _animator = _character.Animator;
+
+        if (_animator != null)
+        {
+            InitializeAnimatorParameters();
+        }
     }
 
     /// <summary>
@@ -88,7 +104,28 @@ public class CharacterAbility : MonoBehaviour
         _inputManager = newInputManager;
     }
 
+    /// <summary>
+    /// Registers a new animator parameter to the list
+    /// </summary>
+    /// <param name="parameterName">Parameter name.</param>
+    /// <param name="parameterType">Parameter type.</param>
+    protected virtual void RegisterAnimatorParameter(string parameterName, AnimatorControllerParameterType parameterType, out int parameter)
+    {
+        parameter = Animator.StringToHash(parameterName);
+
+        if (_animator == null)
+        {
+            return;
+        }
+        if (_animator.HasParameterOfType(parameterName, parameterType))
+        {
+            _character.AnimatorParameters.Add(parameter);
+        }
+    }
+
     #region PLACEHOLDER METHODS
+
+    protected virtual void InitializeAnimatorParameters() { }
 
     /// <summary>
     /// Called at the very start of the ability's cycle, and intended to be overridden, looks for input and calls methods if conditions are met
@@ -107,7 +144,10 @@ public class CharacterAbility : MonoBehaviour
     /// <summary>
     /// Functions as EarlyUpdate in our ability (if it existed).
     /// </summary>
-    public virtual void EarlyProcessAbility() { }
+    public virtual void EarlyProcessAbility()
+    {
+        InternalHandleInput();
+    }
 
     /// <summary>
     /// Functions as Update in our ability.
@@ -117,10 +157,12 @@ public class CharacterAbility : MonoBehaviour
     /// <summary>
     /// Functions as LateUpdate in our ability.
     /// </summary>
-    public virtual void LateProcessAbility() 
-    {
-        InternalHandleInput();
-    }
+    public virtual void LateProcessAbility() { }
+
+    /// <summary>
+    /// Override this to send parameters to the character's animator. This is called once per cycle, by the Character class, after Early, normal and Late process().
+    /// </summary>
+    public virtual void UpdateAnimator() { }
 
     /// <summary>
     /// Override this to reset this ability's parameters. It'll be automatically called when the character gets killed, in anticipation for its respawn.
