@@ -1,20 +1,14 @@
 using JadePhoenix.Tools;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : PersistentSingleton<GameManager>
 {
     public GameObject EnemyContainer;
-    public int EnemyCount;
+    public int EnemyCount = 0;
     public int CurrentSceneIndex = 0;
-
-    protected virtual void Start()
-    {
-        Initialization();
-    }
 
     protected virtual void OnEnable()
     {
@@ -102,10 +96,23 @@ public class GameManager : PersistentSingleton<GameManager>
         Application.Quit();
     }
 
-    public virtual void TriggerGameOver()
+    public virtual void TriggerGameOver(bool victory)
     {
+        if (PauseManager.Instance != null)
+        {
+            PauseManager.Instance.SetPause(true);
+            PauseManager.Instance.GameOver = true;
+        }
+
         if (UIManager.Instance == null) { return; }
 
-        UIManager.Instance.SetDeathScreen(true);
+        if (victory)
+        {
+            UIManager.Instance.SetVictoryScreen(true);
+        }
+        else
+        {
+            UIManager.Instance.SetDeathScreen(true);
+        }
     }
 }

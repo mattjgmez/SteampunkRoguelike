@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
+
 namespace JadePhoenix.Tools
 {
     //[CanEditMultipleObjects]
@@ -50,3 +52,5 @@ namespace JadePhoenix.Tools
         }
     }
 }
+
+#endif

@@ -1,3 +1,4 @@
+using JadePhoenix.Tools;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -51,7 +52,7 @@ public class Health : MonoBehaviour
     protected Collider _collider;
     protected CharacterController _characterController;
     protected bool _initialized = false;
-    
+
     protected virtual void Start()
     {
         Initialization();
@@ -106,6 +107,18 @@ public class Health : MonoBehaviour
             return;
         }
 
+        if (_character != null)
+        {
+            if (_character.CharacterType == Character.CharacterTypes.Player)
+            {
+                AudioManager.Instance.PlayRandomClip(AudioManager.Instance.PlayerTakeDamageClips);
+            }
+            else
+            {
+                AudioManager.Instance.PlayRandomClip(AudioManager.Instance.BulletHitClips);
+            }
+        }
+
         float previousHealth = CurrentHealth;
         CurrentHealth -= damage;
         OnHealthChange?.Invoke();
@@ -150,7 +163,7 @@ public class Health : MonoBehaviour
 
             if (_character.CharacterType == Character.CharacterTypes.Player)
             {
-                GameManager.Instance.TriggerGameOver();
+                GameManager.Instance.TriggerGameOver(false);
             }
         }
         CurrentHealth = 0;

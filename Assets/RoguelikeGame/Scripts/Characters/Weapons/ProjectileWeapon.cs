@@ -59,6 +59,7 @@ public class ProjectileWeapon : Weapon
         for (int i = 0; i < ProjectilesPerShot; i++)
         {
             //Debug.Log($"{this.GetType()}.WeaponUse: Spawning Projectile.", gameObject);
+            AudioManager.Instance.PlayRandomClip(AudioManager.Instance.GunshotClips);
             SpawnProjectile(SpawnPosition, i, ProjectilesPerShot, true);
         }
     }

@@ -5,6 +5,8 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
+
 namespace JadePhoenix.Tools
 {
 	public class ReorderableList {
@@ -1930,4 +1932,4 @@ namespace JadePhoenix.Tools
 		}
 	}
 }
- 
+#endif

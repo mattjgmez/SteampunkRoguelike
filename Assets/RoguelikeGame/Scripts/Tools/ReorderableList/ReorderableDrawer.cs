@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
+
 namespace JadePhoenix.Tools
 {
 	[CustomPropertyDrawer(typeof(ReorderableAttribute))]
@@ -97,3 +99,5 @@ namespace JadePhoenix.Tools
 		}
 	}
 }
+
+#endif

@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections;
 
+#if UNITY_EDITOR
+
 namespace JadePhoenix.Tools
 {
     [CustomPropertyDrawer(typeof(AITransition))]
@@ -68,3 +70,4 @@ namespace JadePhoenix.Tools
         }
     }
 }
+#endif

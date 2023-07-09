@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections;
 
+#if UNITY_EDITOR
 namespace JadePhoenix.Tools
 {
     [CustomPropertyDrawer(typeof(AIAction))]
@@ -46,3 +47,4 @@ namespace JadePhoenix.Tools
         }
     }
 }
+#endif

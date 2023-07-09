@@ -29,6 +29,7 @@ public class UIManager : Singleton<UIManager>
         SetPauseScreen(false);
         SetDeathScreen(false);
         SetUpgradeSelectScreen(false);
+        UpdateRemainingEnemies(GameManager.Instance.EnemyCount);
     }
 
     /// <summary>
@@ -78,21 +79,23 @@ public class UIManager : Singleton<UIManager>
     {
         if (UpgradeSelectScreen != null)
         {
+            UpgradeSelectScreen.SetActive(state);
             PauseManager.Instance.SetPause(state);
             if (state == true)
             {
                 List<Upgrade> upgrades = new List<Upgrade>(UpgradeManager.Instance.Upgrades);
                 foreach (UpgradeCard card in UpgradeCards)
                 {
-                    int index = UnityEngine.Random.Range(0, upgrades.Count);
+                    card.Button.interactable = true;
+                    card.GetComponent<Image>().raycastTarget = true;
+                    card.Animator.SetBool("Selected", false);
 
-                    //Debug.Log($"{this.GetType()}.SetUpgradeSelectScreen: index = {index} cardData = {upgrades[index]}.", gameObject);
+                    int index = UnityEngine.Random.Range(0, upgrades.Count);
 
                     card.AssignUpgradeData(upgrades[index]);
                     upgrades.Remove(upgrades[index]);
                 }
             }
-            UpgradeSelectScreen.SetActive(state);
             EventSystem.current.sendNavigationEvents = state;
         }
     }
@@ -140,5 +143,21 @@ public class UIManager : Singleton<UIManager>
     public virtual void UpdateRemainingEnemies(int value)
     {
         RemainingEnemies.text = value.ToString();
+    }
+
+
+    public void LoadMainMenu()
+    {
+        GameManager.Instance.LoadMainMenu();
+    }
+
+    public void RestartRun()
+    {
+        GameManager.Instance.RestartRun();
+    }
+
+    public void CloseGame()
+    {
+        GameManager.Instance.CloseGame();
     }
 }
