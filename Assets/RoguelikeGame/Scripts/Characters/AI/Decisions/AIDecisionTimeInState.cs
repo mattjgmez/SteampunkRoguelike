@@ -8,11 +8,12 @@ using UnityEngine;
 /// </summary>
 public class AIDecisionTimeInState : AIDecision
 {
-
-    /// The minimum duration, in seconds, after which to return true
+    [Tooltip("The minimum duration, in seconds, after which to return true")]
     public float AfterTimeMin = 2f;
-    /// The maximum duration, in seconds, after which to return true
+    [Tooltip("The maximum duration, in seconds, after which to return true")]
     public float AfterTimeMax = 2f;
+    [Tooltip("The relevant WeaponHandler component for determining AI Attack duration. Can be safely left null. Only works with Melee weapons.")]
+    public CharacterWeaponHandler MeleeWeaponHandler;
 
     protected float _randomTime;
 
@@ -50,6 +51,13 @@ public class AIDecisionTimeInState : AIDecision
     public override void OnEnterState()
     {
         base.OnEnterState();
+
+        if (MeleeWeaponHandler != null)
+        {
+            AfterTimeMin = (MeleeWeaponHandler.CurrentWeapon as MeleeWeapon).ActiveDuration;
+            AfterTimeMax = (MeleeWeaponHandler.CurrentWeapon as MeleeWeapon).ActiveDuration;
+        }
+
         RandomizeTime();
     }
 

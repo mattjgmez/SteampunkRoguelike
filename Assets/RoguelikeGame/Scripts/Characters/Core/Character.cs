@@ -16,6 +16,7 @@ public class Character : MonoBehaviour
     public string PlayerID = "";
 
     public CharacterStates CharacterState { get; protected set; }
+    public CharacterAbility[] CharacterAbilities { get { return _characterAbilities; } }
 
     [Header("Model")]
     public GameObject CharacterModel;

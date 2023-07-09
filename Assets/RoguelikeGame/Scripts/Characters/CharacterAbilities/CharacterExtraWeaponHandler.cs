@@ -31,7 +31,7 @@ public class CharacterExtraWeaponHandler : CharacterWeaponHandler
 
         if (assignedButton.State.CurrentState == JP_Input.ButtonStates.ButtonUp)
         {
-            Debug.Log($"{this.GetType()}.HandleInput: Got button up, ShootStop called.", gameObject);
+            //Debug.Log($"{this.GetType()}.HandleInput: Got button up, ShootStop called.", gameObject);
             ShootStop();
         }
 

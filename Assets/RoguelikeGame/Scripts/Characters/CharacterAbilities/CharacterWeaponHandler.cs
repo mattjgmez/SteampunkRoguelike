@@ -17,9 +17,12 @@ public class CharacterWeaponHandler : CharacterAbility
     public bool NewInputExtendsBuffer;
     public float MaxBufferDuration = .25f;
 
+    [Header("Weapon")]
     /// the position from which projectiles will be spawned (can be safely left empty)
     public Transform ProjectileSpawn;
     public Weapon CurrentWeapon;
+    [Range(1, 3)] 
+    public int WeaponID = 1;
 
     public WeaponAim WeaponAimComponent { get { return _weaponAim; } }
 
@@ -28,6 +31,13 @@ public class CharacterWeaponHandler : CharacterAbility
     protected ProjectileWeapon _projectileWeapon;
     protected float _bufferTimer = 0f;
     protected bool _buffering = false;
+
+    protected const string _aliveAnimationParameterName = "Alive";
+    protected const string _idleAnimationParameterName = "Idle";
+    protected const string _attackAnimationParameterName = "Attack";
+    protected int _aliveAnimationParameter;
+    protected int _idleAnimationParameter;
+    protected int _attackAnimationParameter;
 
     #endregion
 
@@ -43,6 +53,7 @@ public class CharacterWeaponHandler : CharacterAbility
     public virtual void Setup()
     {
         _character = GetComponent<Character>();
+        _movement.ChangeState(CharacterStates.MovementStates.Idle);
 
         if (CurrentWeapon == null) { return; }
 
@@ -86,7 +97,7 @@ public class CharacterWeaponHandler : CharacterAbility
 
         if (_inputManager.ShootButton.State.CurrentState == JP_Input.ButtonStates.ButtonUp)
         {
-            Debug.Log($"{this.GetType()}.HandleInput: Got button up, ShootStop called.", gameObject);
+            //Debug.Log($"{this.GetType()}.HandleInput: Got button up, ShootStop called.", gameObject);
             ShootStop();
         }
 
@@ -144,6 +155,7 @@ public class CharacterWeaponHandler : CharacterAbility
             ExtendBuffer();
         }
 
+        _movement.ChangeState(CharacterStates.MovementStates.Attacking);
         CurrentWeapon.WeaponInputStart();
     }
 
@@ -161,6 +173,8 @@ public class CharacterWeaponHandler : CharacterAbility
     /// </summary>
     public virtual void ShootStop()
     {
+        _movement.ChangeState(CharacterStates.MovementStates.Idle);
+
         if (CurrentWeapon == null)
         {
             return;
@@ -217,5 +231,23 @@ public class CharacterWeaponHandler : CharacterAbility
     {
         base.OnRespawn();
         Setup();
+    }
+
+    protected override void InitializeAnimatorParameters()
+    {
+        if (CurrentWeapon == null) { return; }
+
+        RegisterAnimatorParameter(_aliveAnimationParameterName, AnimatorControllerParameterType.Bool, out _aliveAnimationParameter);
+        RegisterAnimatorParameter(_idleAnimationParameterName, AnimatorControllerParameterType.Bool, out _idleAnimationParameter);
+        RegisterAnimatorParameter(_attackAnimationParameterName + WeaponID, AnimatorControllerParameterType.Bool, out _attackAnimationParameter);
+    }
+
+    public override void UpdateAnimator()
+    {
+        if (CurrentWeapon == null) { return; }
+
+        JP_AnimatorExtensions.UpdateAnimatorBool(_animator, _aliveAnimationParameter, !(_condition.CurrentState == CharacterStates.CharacterConditions.Dead), _character.AnimatorParameters);
+        JP_AnimatorExtensions.UpdateAnimatorBool(_animator, _idleAnimationParameter, _movement.CurrentState == CharacterStates.MovementStates.Idle, _character.AnimatorParameters);
+        JP_AnimatorExtensions.UpdateAnimatorBool(_animator, _attackAnimationParameter, _movement.CurrentState == CharacterStates.MovementStates.Attacking, _character.AnimatorParameters);
     }
 }

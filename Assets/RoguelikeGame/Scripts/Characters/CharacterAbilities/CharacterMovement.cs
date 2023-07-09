@@ -202,14 +202,12 @@ public class CharacterMovement : CharacterAbility
 
     protected override void InitializeAnimatorParameters()
     {
-        Debug.Log($"{this.GetType()}.InitializeAnimatorParameters: Called.", gameObject);
         RegisterAnimatorParameter(_walkingAnimationParameterName, AnimatorControllerParameterType.Bool, out _walkingAnimationParameter);
         RegisterAnimatorParameter(_idleAnimationParameterName, AnimatorControllerParameterType.Bool, out _idleAnimationParameter);
     }
 
     public override void UpdateAnimator()
     {
-        Debug.Log($"{this.GetType()}.UpdateAnimator: Walking = [{_movement.CurrentState == CharacterStates.MovementStates.Walking}] Idle = [{_movement.CurrentState == CharacterStates.MovementStates.Idle}].", gameObject);
         JP_AnimatorExtensions.UpdateAnimatorBool(_animator, _walkingAnimationParameter, _movement.CurrentState == CharacterStates.MovementStates.Walking, _character.AnimatorParameters);
         JP_AnimatorExtensions.UpdateAnimatorBool(_animator, _idleAnimationParameter, _movement.CurrentState == CharacterStates.MovementStates.Idle, _character.AnimatorParameters);
     }

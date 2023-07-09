@@ -2,7 +2,6 @@ using JadePhoenix.Tools;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Weapon;
 
 public class InputManager : Singleton<InputManager>
 {

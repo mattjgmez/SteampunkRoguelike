@@ -9,7 +9,11 @@ AnimatorOverrideController:
   m_Name: MeleeRobot
   m_Controller: {fileID: 9100000, guid: f93b21bd7cb9e2445813e52949c72352, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7151708930188213966, guid: 8701b24ab7f284443b529ef66242d255, type: 3}
-    m_OverrideClip: {fileID: 2667949614841947897, guid: d1cdd99ceb996d735adc3aa6804284f2, type: 3}
-  - m_OriginalClip: {fileID: 7027862345730073964, guid: 8701b24ab7f284443b529ef66242d255, type: 3}
+  - m_OriginalClip: {fileID: 6720303635017113406, guid: 8701b24ab7f284443b529ef66242d255, type: 3}
+    m_OverrideClip: {fileID: 6720303635017113406, guid: d1cdd99ceb996d735adc3aa6804284f2, type: 3}
+  - m_OriginalClip: {fileID: 8457827382905983551, guid: 8701b24ab7f284443b529ef66242d255, type: 3}
+    m_OverrideClip: {fileID: 8457827382905983551, guid: d1cdd99ceb996d735adc3aa6804284f2, type: 3}
+  - m_OriginalClip: {fileID: -3100369314251171874, guid: 8701b24ab7f284443b529ef66242d255, type: 3}
     m_OverrideClip: {fileID: -3100369314251171874, guid: d1cdd99ceb996d735adc3aa6804284f2, type: 3}
+  - m_OriginalClip: {fileID: -9121621101649706817, guid: 8701b24ab7f284443b529ef66242d255, type: 3}
+    m_OverrideClip: {fileID: 2667949614841947897, guid: d1cdd99ceb996d735adc3aa6804284f2, type: 3}
