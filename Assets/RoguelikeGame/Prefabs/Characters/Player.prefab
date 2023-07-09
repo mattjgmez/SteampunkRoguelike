@@ -199,6 +199,7 @@ MonoBehaviour:
   CharacterModel: {fileID: 1572283616199994512}
   SendStateChangeEvents: 1
   SendStateUpdateEvents: 1
+  CharacterAnimator: {fileID: 4952633819026970170}
   CameraTarget: {fileID: 1572283614844093891}
 --- !u!114 &1572283615315241840
 MonoBehaviour:
@@ -222,6 +223,7 @@ MonoBehaviour:
   MaxBufferDuration: 0.25
   ProjectileSpawn: {fileID: 0}
   CurrentWeapon: {fileID: 1572283616563142083}
+  WeaponID: 1
 --- !u!114 &1572283615315241841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +246,7 @@ MonoBehaviour:
   MaxBufferDuration: 0.25
   ProjectileSpawn: {fileID: 0}
   CurrentWeapon: {fileID: 1572283615362941903}
+  WeaponID: 1
   ButtonID: Melee
 --- !u!114 &1572283615315241842
 MonoBehaviour:
@@ -261,7 +264,7 @@ MonoBehaviour:
   AbilityInProgressSfx: {fileID: 0}
   AbilityStopSfx: {fileID: 0}
   InputAuthorized: 1
-  WalkSpeed: 6
+  WalkSpeed: 10
   ShouldSetMovement: 1
   IdleThreshold: 0.05
   Acceleration: 0
@@ -497,9 +500,9 @@ MonoBehaviour:
   TriggerMode: 1
   DelayBeforeUse: 0
   DelayBeforeUseReleaseInterruption: 1
-  TimeBetweenUses: 0.1
+  TimeBetweenUses: 0.5
   TimeBetweenUsesReleaseInterruption: 1
-  MagazineBased: 1
+  MagazineBased: 0
   MagazineSize: 6
   ReloadTime: 2
   AmmoConsumedPerShot: 1
@@ -511,7 +514,7 @@ MonoBehaviour:
   ProjectilesPerShot: 1
   Spread: {x: 0, y: 0, z: 0}
   RandomSpread: 0
-  SpawnPosition: {x: 0, y: 2, z: 0.5}
+  SpawnPosition: {x: 0.8, y: 2, z: -0.5}
 --- !u!114 &1572283616563142092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,7 +611,7 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 8701b24ab7f284443b529ef66242d255, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 1ef4e9567ced80682a9a74b6e1f1a506, type: 2}
+      objectReference: {fileID: 9100000, guid: f93b21bd7cb9e2445813e52949c72352, type: 2}
     - target: {fileID: 8924593777282925590, guid: 8701b24ab7f284443b529ef66242d255, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.14879242
@@ -622,5 +625,10 @@ PrefabInstance:
 --- !u!4 &1322764042196847680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8701b24ab7f284443b529ef66242d255, type: 3}
+  m_PrefabInstance: {fileID: 1572283615271775147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4952633819026970170 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 8701b24ab7f284443b529ef66242d255, type: 3}
   m_PrefabInstance: {fileID: 1572283615271775147}
   m_PrefabAsset: {fileID: 0}

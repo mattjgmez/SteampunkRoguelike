@@ -8,6 +8,13 @@ public class CharacterUpgradeable : CharacterAbility
 
     protected bool _upgradesApplied = false;
 
+    protected override void Start()
+    {
+        base.Start();
+        if (UpgradeManager.Instance.Upgrades.Length <= 0) { return; }
+        Upgrades = UpgradeManager.Instance.Upgrades;
+    }
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -35,8 +42,9 @@ public class CharacterUpgradeable : CharacterAbility
 
         Upgrades = UpgradeManager.Instance.Upgrades;
 
-        for (int i = 0; i <= Upgrades.Length; i++)
+        for (int i = 0; i < Upgrades.Length; i++)
         {
+            Upgrades[i].CalculateBonus();
             Upgrades[i].ApplyUpgrade(_character);
         }
 
@@ -47,8 +55,9 @@ public class CharacterUpgradeable : CharacterAbility
     {
         if (Upgrades.Length <= 0) { return; }
 
-        for (int i = 0; i <= Upgrades.Length; i++)
+        for (int i = 0; i < Upgrades.Length; i++)
         {
+            Upgrades[i].CalculateBonus();
             Upgrades[i].UnapplyUpgrade(_character);
         }
 

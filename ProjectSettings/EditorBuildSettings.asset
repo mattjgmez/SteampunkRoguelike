@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/RoguelikeGame/Scenes/MainMenu.unity
+    guid: 0e9fc1491773f0a43a033ba4cb32bb40
+  - enabled: 1
+    path: Assets/RoguelikeGame/Scenes/Floor1.unity
+    guid: b96754eb653ef5243bf35e654ef06708
+  - enabled: 1
+    path: Assets/RoguelikeGame/Scenes/Floor2.unity
+    guid: 89d03308d28a98b4ebf064e0dc844734
   m_configObjects: {}

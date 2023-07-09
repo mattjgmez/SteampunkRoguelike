@@ -42,9 +42,10 @@ public class UpgradeDamage : Upgrade
     {
         _characterWeapons = new List<CharacterWeaponHandler>();
 
-        foreach (CharacterWeaponHandler weaponHandler in character.CharacterAbilities)
+        foreach (CharacterAbility ability in character.CharacterAbilities)
         {
-            _characterWeapons.Add(weaponHandler);
+            if (ability.GetType() == typeof(CharacterWeaponHandler))
+            _characterWeapons.Add(ability as CharacterWeaponHandler);
         }
     }
 }

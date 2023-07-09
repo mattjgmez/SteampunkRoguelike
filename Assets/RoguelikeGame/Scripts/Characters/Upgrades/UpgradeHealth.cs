@@ -12,6 +12,7 @@ public class UpgradeHealth : Upgrade
 
         health.MaxHealth = IsMultiply ? health.MaxHealth * (int)_totalBonus : health.MaxHealth + (int)_totalBonus;
         health.InitialHealth = IsMultiply ? health.InitialHealth * (int)_totalBonus : health.InitialHealth + (int)_totalBonus;
+        health.CurrentHealth = IsMultiply ? health.CurrentHealth * (int)_totalBonus : health.CurrentHealth + (int)_totalBonus;
     }
 
     public override void UnapplyUpgrade(Character character)
@@ -22,5 +23,6 @@ public class UpgradeHealth : Upgrade
 
         health.MaxHealth = IsMultiply ? health.MaxHealth / (int)_totalBonus : health.MaxHealth - (int)_totalBonus;
         health.InitialHealth = IsMultiply ? health.InitialHealth / (int)_totalBonus : health.InitialHealth - (int)_totalBonus;
+        health.CurrentHealth = IsMultiply ? health.CurrentHealth / (int)_totalBonus : health.CurrentHealth - (int)_totalBonus;
     }
 }

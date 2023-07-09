@@ -240,13 +240,13 @@ public class Character : MonoBehaviour
     }
 
     /// <summary>
-    /// Called to disable the player (at the end of a level for example. 
+    /// Called to toggle the player (at the end of a level for example. 
     /// It won't move and respond to input after this.
     /// </summary>
-    public virtual void Disable()
+    public virtual void SetEnable(bool state)
     {
-        this.enabled = false;
-        _controller.enabled = false;
+        this.enabled = state;
+        _controller.enabled = state;
     }
 
     /// <summary>

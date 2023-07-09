@@ -40,11 +40,14 @@ public class Health : MonoBehaviour
     public delegate void OnDeathDelegate();
     public OnDeathDelegate OnDeath;
 
+    // health change delegate
+    public delegate void OnHealthChangeDelegate();
+    public OnHealthChangeDelegate OnHealthChange;
+
     protected Vector3 _initialPosition;
     protected Renderer _renderer;
     protected Character _character;
     protected TopDownController _controller;
-    //protected HealthBar _healthBar; THIS NEEDS TO BE IMPLEMENTED EVENTUALLY BUT NOT RIGHT NOW
     protected Collider _collider;
     protected CharacterController _characterController;
     protected bool _initialized = false;
@@ -85,7 +88,7 @@ public class Health : MonoBehaviour
         _initialized = true;
         CurrentHealth = InitialHealth;
         DamageEnabled();
-        UpdateHealthBar(false);
+        OnHealthChange?.Invoke();
     }
 
     /// <summary>
@@ -105,6 +108,7 @@ public class Health : MonoBehaviour
 
         float previousHealth = CurrentHealth;
         CurrentHealth -= damage;
+        OnHealthChange?.Invoke();
 
         OnHit?.Invoke();
 
@@ -123,14 +127,12 @@ public class Health : MonoBehaviour
         // we trigger a damage taken event
         CharacterEvents.DamageTakenEvent.Trigger(_character, instigator, CurrentHealth, damage, previousHealth);
 
-        // we update the health bar
-        UpdateHealthBar(true);
-
         // if health has reached zero
         if (CurrentHealth <= 0)
         {
             // we set its health to zero (useful for the healthbar)
             CurrentHealth = 0;
+            OnHealthChange?.Invoke();
 
             Kill();
         }
@@ -148,10 +150,11 @@ public class Health : MonoBehaviour
 
             if (_character.CharacterType == Character.CharacterTypes.Player)
             {
-                // EVENTUALLY ADD GAMEMANAGER EVENT TRIGGER FOR PLAYER DEATH
+                GameManager.Instance.TriggerGameOver();
             }
         }
         CurrentHealth = 0;
+        OnHealthChange?.Invoke();
 
         DamageDisabled();
 
@@ -173,6 +176,11 @@ public class Health : MonoBehaviour
         }
 
         OnDeath?.Invoke();
+
+        if (_character != null && _character.CharacterType != Character.CharacterTypes.Player)
+        {
+            GameManager.Instance.UpdateEnemyCount(-1);
+        }
 
         if (DisableControllerOnDeath && (_controller != null))
         {
@@ -253,7 +261,7 @@ public class Health : MonoBehaviour
         //}
 
         Initialization();
-        UpdateHealthBar(false);
+        OnHealthChange?.Invoke();
 
         OnRevive?.Invoke();
     }
@@ -267,7 +275,7 @@ public class Health : MonoBehaviour
     {
         // this function adds health to the character's Health and prevents it to go above MaxHealth.
         CurrentHealth = Mathf.Min(CurrentHealth + health, MaxHealth);
-        UpdateHealthBar(true);
+        OnHealthChange?.Invoke();
     }
 
     /// <summary>
@@ -276,31 +284,7 @@ public class Health : MonoBehaviour
     public virtual void ResetHealthToMaxHealth()
     {
         CurrentHealth = MaxHealth;
-        UpdateHealthBar(false);
-    }
-
-    /// <summary>
-    /// Updates the character's health bar progress.
-    /// </summary>
-    protected virtual void UpdateHealthBar(bool show)
-    {
-        //if (_healthBar != null)
-        //{
-        //    _healthBar.UpdateBar(CurrentHealth, 0f, MaxHealth, show);
-        //}
-
-        /// UNCOMMENT ONCE GUIMANAGER IS IMPLEMENTED
-        //if (_character != null)
-        //{
-        //    if (_character.CharacterType == Character.CharacterTypes.Player)
-        //    {
-        //        // We update the health bar
-        //        if (GUIManager.Instance != null)
-        //        {
-        //            GUIManager.Instance.UpdateHealthBar(CurrentHealth, 0f, MaxHealth, _character.PlayerID);
-        //        }
-        //    }
-        //}
+        OnHealthChange?.Invoke();
     }
 
     /// <summary>
@@ -337,7 +321,7 @@ public class Health : MonoBehaviour
             Model.SetActive(true);
         }
         DamageEnabled();
-        UpdateHealthBar(false);
+        OnHealthChange?.Invoke();
     }
 
     /// <summary>

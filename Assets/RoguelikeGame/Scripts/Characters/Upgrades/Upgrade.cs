@@ -19,10 +19,10 @@ public abstract class Upgrade : MonoBehaviour
 
     protected virtual void Start()
     {
-        Initialization();
+        CalculateBonus();
     }
 
-    protected virtual void Initialization() 
+    public virtual void CalculateBonus() 
     {
         _totalBonus = UpgradeImpact * AmountActive;
     }
