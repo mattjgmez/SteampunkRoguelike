@@ -18,7 +18,7 @@ public class UpgradeDamage : Upgrade
 
             if (damageOnTouch == null) { continue; }
 
-            damageOnTouch.DamageCaused = IsMultiply ? damageOnTouch.DamageCaused * (int)_totalBonus : damageOnTouch.DamageCaused + (int)_totalBonus;
+            damageOnTouch.DamageCaused = Mathf.RoundToInt(IsMultiply ? damageOnTouch.DamageCaused * _totalBonus : damageOnTouch.DamageCaused + _totalBonus);
         }
     }
 
@@ -34,7 +34,7 @@ public class UpgradeDamage : Upgrade
             
             if (damageOnTouch == null) { continue; }
 
-            damageOnTouch.DamageCaused = IsMultiply ? damageOnTouch.DamageCaused / (int)_totalBonus : damageOnTouch.DamageCaused - (int)_totalBonus;
+            damageOnTouch.DamageCaused = damageOnTouch.BaseDamageCaused;
         }
     }
 

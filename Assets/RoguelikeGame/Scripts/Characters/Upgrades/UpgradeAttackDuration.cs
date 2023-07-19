@@ -36,11 +36,7 @@ public class UpgradeAttackDuration : Upgrade
 
             if (weapon == null || weapon is not MeleeWeapon) { continue; }
 
-            float newDuration = (weapon as MeleeWeapon).ActiveDuration;
-
-            newDuration = IsMultiply ? newDuration / _totalBonus : newDuration - _totalBonus;
-
-            (weapon as MeleeWeapon).ActiveDuration = newDuration;
+            (weapon as MeleeWeapon).ActiveDuration = (weapon as MeleeWeapon).BaseActiveDuration;
         }
     }
 
@@ -50,8 +46,10 @@ public class UpgradeAttackDuration : Upgrade
 
         foreach (CharacterAbility ability in character.CharacterAbilities)
         {
-            if (ability.GetType() == typeof(CharacterWeaponHandler))
+            if (ability.GetType() == typeof(CharacterWeaponHandler)) 
+            { 
                 _characterWeapons.Add(ability as CharacterWeaponHandler);
+            }
         }
     }
 }

@@ -181,6 +181,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 9984
   PerfectImpact: 0
+  BaseDamageCaused: 1
   DamageCaused: 1
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 0

@@ -14,7 +14,8 @@ public class MeleeWeapon : Weapon
 
     [Header("Damage Area Timing")]
     public float InitialDelay = 0f;
-    public float ActiveDuration = 1f;
+    public float BaseActiveDuration = 2f;
+    public float ActiveDuration;
 
     [Header("Damage Caused")]
     public LayerMask TargetLayerMask;
@@ -49,6 +50,8 @@ public class MeleeWeapon : Weapon
         {
             _damageOnTouch.Owner = Owner.gameObject;
         }
+
+        ActiveDuration = BaseActiveDuration;
     }
 
     protected virtual void CreateDamageArea()

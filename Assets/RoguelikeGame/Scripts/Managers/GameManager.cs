@@ -27,6 +27,7 @@ public class GameManager : PersistentSingleton<GameManager>
 
     protected virtual void Initialization()
     {
+        EnemyCount = 0;
         CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         EnemyContainer = GameObject.FindGameObjectWithTag("EnemyContainer");
@@ -93,7 +94,8 @@ public class GameManager : PersistentSingleton<GameManager>
     {
         if (UpgradeManager.Instance != null)
         {
-            Destroy(UpgradeManager.Instance.gameObject);
+            UpgradeManager.Instance.ResetUpgrades();
+            UpgradeManager.Instance.RestartTimer();
         }
         SceneManager.LoadScene("Floor1");
     }

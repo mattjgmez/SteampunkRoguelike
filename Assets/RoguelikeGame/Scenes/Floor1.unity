@@ -12342,9 +12342,10 @@ MonoBehaviour:
   Label: Overclocking
   Description: Melee enemies attack for a longer time
   Sprite: {fileID: 1332333204, guid: 33b81d4d13f80c4498955fe2824a8cac, type: 3}
-  UpgradeImpact: 1.2
+  UpgradeImpact: 0.1
   IsMultiply: 1
   AmountActive: 0
+  _totalBonus: 0
 --- !u!114 &1978634344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12363,6 +12364,7 @@ MonoBehaviour:
   UpgradeImpact: 2
   IsMultiply: 0
   AmountActive: 0
+  _totalBonus: 0
 --- !u!114 &1978634345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12381,6 +12383,7 @@ MonoBehaviour:
   UpgradeImpact: 5
   IsMultiply: 0
   AmountActive: 0
+  _totalBonus: 0
 --- !u!114 &1978634346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12399,6 +12402,7 @@ MonoBehaviour:
   UpgradeImpact: 1
   IsMultiply: 0
   AmountActive: 0
+  _totalBonus: 0
 --- !u!114 &1978634347
 MonoBehaviour:
   m_ObjectHideFlags: 0

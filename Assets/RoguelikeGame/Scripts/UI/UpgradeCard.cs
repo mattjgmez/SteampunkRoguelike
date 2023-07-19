@@ -20,11 +20,6 @@ public class UpgradeCard : MonoBehaviour
         Animator = GetComponent<Animator>();
     }
 
-    protected virtual void Initialize()
-    {
-
-    }
-
     public virtual void AssignUpgradeData(Upgrade upgradeToAssign)
     {
         //Debug.Log($"{this.GetType()}.AssignUpgradeData: {Button}.", gameObject);

@@ -87,4 +87,12 @@ public class UpgradeManager : PersistentSingleton<UpgradeManager>
             }
         }
     }
+
+    public virtual void ResetUpgrades()
+    {
+        foreach (Upgrade upgrade in Upgrades)
+        {
+            upgrade.AmountActive = 0;
+        }
+    }
 }

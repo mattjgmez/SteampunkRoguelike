@@ -15,7 +15,7 @@ public abstract class Upgrade : MonoBehaviour
     public abstract void UnapplyUpgrade(Character character);
     public int AmountActive = 0;
 
-    protected float _totalBonus;
+    public float _totalBonus;
 
     protected virtual void Start()
     {
@@ -24,6 +24,6 @@ public abstract class Upgrade : MonoBehaviour
 
     public virtual void CalculateBonus() 
     {
-        _totalBonus = UpgradeImpact * AmountActive;
+        _totalBonus = (UpgradeImpact * AmountActive) + (IsMultiply ? 1 : 0);
     }
 }

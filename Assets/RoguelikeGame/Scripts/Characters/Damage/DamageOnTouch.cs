@@ -15,7 +15,8 @@ public class DamageOnTouch : MonoBehaviour
     public bool PerfectImpact = false;
 
     [Header("DamageCaused")]
-    public int DamageCaused = 10;
+    public int BaseDamageCaused = 10;
+    public int DamageCaused;
     public KnockbackStyles DamageCausedKnockbackType = KnockbackStyles.AddForce;
     public KnockbackDirections DamageCausedKnockbackDirection;
     public Vector3 DamageCausedKnockbackForce = new Vector3(10, 2, 0);
@@ -69,6 +70,8 @@ public class DamageOnTouch : MonoBehaviour
 
         _gizmosColor = Color.red;
         _gizmosColor.a = 0.25f;
+
+        DamageCaused = BaseDamageCaused;
     }
 
     protected virtual void Update()
