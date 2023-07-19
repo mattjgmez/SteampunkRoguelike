@@ -17,15 +17,15 @@ public class UpgradeManager : PersistentSingleton<UpgradeManager>
     public event UpgradeHandler NewUpgrade;
 
     protected int[] _possibleUpgradesIndex;
-    protected float _remainingTime = 0;
-    protected bool _timerIsRunning;
+    public float _remainingTime = 0;
+    public bool _timerIsRunning;
 
     protected virtual void Start()
     {
         Initialization();
     }
 
-    private void Initialization()
+    protected virtual void Initialization()
     {
         Upgrades = GetComponents<Upgrade>();
         _possibleUpgradesIndex = new int[Upgrades.Length];

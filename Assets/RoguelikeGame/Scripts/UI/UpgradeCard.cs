@@ -20,15 +20,30 @@ public class UpgradeCard : MonoBehaviour
         Animator = GetComponent<Animator>();
     }
 
+    protected virtual void Initialize()
+    {
+
+    }
+
     public virtual void AssignUpgradeData(Upgrade upgradeToAssign)
     {
         //Debug.Log($"{this.GetType()}.AssignUpgradeData: {Button}.", gameObject);
 
         UpgradeData = upgradeToAssign;
-        Button.onClick.AddListener(() => UpgradeManager.Instance.AddUpgrade(UpgradeData.Label));
 
         Icon.sprite = UpgradeData.Sprite;
         NameText.text = UpgradeData.Label;
         DescriptionText.text = UpgradeData.Description;
+    }
+
+    /// A bit of a band-aid method used to call the UpgradeManager's RestartTimer method using an Animation event.
+    public virtual void TriggerSelected()
+    {
+        UpgradeManager.Instance.RestartTimer();
+        UpgradeManager.Instance.AddUpgrade(UpgradeData.Label);
+
+        UIManager.Instance.SetUpgradeSelectScreen(false);
+
+        PauseManager.Instance.SetPause(false);
     }
 }

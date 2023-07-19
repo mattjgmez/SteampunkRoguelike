@@ -14,7 +14,7 @@ public class UpgradeDamage : Upgrade
 
         foreach (CharacterWeaponHandler weaponHandler in _characterWeapons)
         {
-            DamageOnTouch damageOnTouch = weaponHandler.CurrentWeapon.GetComponent<DamageOnTouch>();
+            DamageOnTouch damageOnTouch = (weaponHandler.CurrentWeapon as MeleeWeapon).DamageOnTouch;
 
             if (damageOnTouch == null) { continue; }
 
@@ -30,7 +30,7 @@ public class UpgradeDamage : Upgrade
 
         foreach (CharacterWeaponHandler weaponHandler in _characterWeapons)
         {
-            DamageOnTouch damageOnTouch = weaponHandler.CurrentWeapon.GetComponent<DamageOnTouch>();
+            DamageOnTouch damageOnTouch = (weaponHandler.CurrentWeapon as MeleeWeapon).DamageOnTouch;
             
             if (damageOnTouch == null) { continue; }
 

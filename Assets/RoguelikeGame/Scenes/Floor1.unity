@@ -2794,42 +2794,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1363740866}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: TriggerSetUpgradeSelectScreen
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 471627351}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: SetPause
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: RestartTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &368705800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5065,6 +5029,10 @@ PrefabInstance:
     - target: {fileID: 133032299392128594, guid: d70ba88f385ad9841a8eed380babe487, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.05673457
+      objectReference: {fileID: 0}
+    - target: {fileID: 133032299392128594, guid: d70ba88f385ad9841a8eed380babe487, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.09590206
       objectReference: {fileID: 0}
     - target: {fileID: 3208300619741037699, guid: d70ba88f385ad9841a8eed380babe487, type: 3}
       propertyPath: m_RootOrder
@@ -8871,42 +8839,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1363740866}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: TriggerSetUpgradeSelectScreen
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 471627351}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: SetPause
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: RestartTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1260683668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10981,42 +10913,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1363740866}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: TriggerSetUpgradeSelectScreen
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 471627351}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: SetPause
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
-        m_MethodName: RestartTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1673202283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12464,7 +12360,7 @@ MonoBehaviour:
   Label: Speedy Fast
   Description: Enemies move slightly faster
   Sprite: {fileID: 1226126997, guid: 33b81d4d13f80c4498955fe2824a8cac, type: 3}
-  UpgradeImpact: 1
+  UpgradeImpact: 2
   IsMultiply: 0
   AmountActive: 0
 --- !u!114 &1978634345
@@ -12516,7 +12412,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Upgrades: []
-  TimeInSecondsBetweenUpgrades: 60
+  TimeInSecondsBetweenUpgrades: 15
+  _remainingTime: 0
+  _timerIsRunning: 0
 --- !u!4 &1978634348
 Transform:
   m_ObjectHideFlags: 0
@@ -12827,6 +12725,10 @@ PrefabInstance:
     - target: {fileID: 133032299392128594, guid: d70ba88f385ad9841a8eed380babe487, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.05673457
+      objectReference: {fileID: 0}
+    - target: {fileID: 133032299392128594, guid: d70ba88f385ad9841a8eed380babe487, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.09590206
       objectReference: {fileID: 0}
     - target: {fileID: 3208300619741037699, guid: d70ba88f385ad9841a8eed380babe487, type: 3}
       propertyPath: m_RootOrder

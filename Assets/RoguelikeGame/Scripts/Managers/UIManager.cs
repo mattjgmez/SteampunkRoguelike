@@ -35,12 +35,12 @@ public class UIManager : Singleton<UIManager>
     /// <summary>
     /// Sets the pause screen on or off.
     /// </summary>
-    /// <param name="state">If set to <c>true</c>, sets the pause.</param>
     public virtual void SetPauseScreen(bool state)
     {
         if (PauseScreen != null)
         {
             PauseScreen.SetActive(state);
+            PauseManager.Instance.SetPause(state);
             EventSystem.current.sendNavigationEvents = state;
         }
     }
@@ -48,12 +48,12 @@ public class UIManager : Singleton<UIManager>
     /// <summary>
     /// Sets the death screen on or off.
     /// </summary>
-    /// <param name="state">If set to <c>true</c>, sets the pause.</param>
     public virtual void SetDeathScreen(bool state)
     {
         if (DeathScreen != null)
         {
             DeathScreen.SetActive(state);
+            PauseManager.Instance.SetPause(state);
             EventSystem.current.sendNavigationEvents = state;
         }
     }
@@ -61,12 +61,12 @@ public class UIManager : Singleton<UIManager>
     /// <summary>
     /// Sets the victory screen on or off.
     /// </summary>
-    /// <param name="state">If set to <c>true</c>, sets the pause.</param>
     public virtual void SetVictoryScreen(bool state)
     {
         if (VictoryScreen != null)
         {
             VictoryScreen.SetActive(state);
+            PauseManager.Instance.SetPause(state);
             EventSystem.current.sendNavigationEvents = state;
         }
     }
@@ -74,7 +74,6 @@ public class UIManager : Singleton<UIManager>
     /// <summary>
     /// Sets the upgrade select screen on or off.
     /// </summary>
-    /// <param name="state">If set to <c>true</c>, sets the pause.</param>
     public virtual void SetUpgradeSelectScreen(bool state)
     {
         if (UpgradeSelectScreen != null)
@@ -98,17 +97,6 @@ public class UIManager : Singleton<UIManager>
             }
             EventSystem.current.sendNavigationEvents = state;
         }
-    }
-
-    public virtual void TriggerSetUpgradeSelectScreen(bool state)
-    {
-        StartCoroutine(SetUpgradeSelectScreenCoroutine(state));
-    }
-
-    public virtual IEnumerator SetUpgradeSelectScreenCoroutine(bool state)
-    {
-        yield return new WaitForSeconds(1);
-        SetUpgradeSelectScreen(state);
     }
 
     /// <summary>

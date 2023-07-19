@@ -24,6 +24,8 @@ public class MeleeWeapon : Weapon
     public float InvincibilityDuration = 0.5f;
     public bool CanDamageOwner = false;
 
+    public DamageOnTouch DamageOnTouch { get { return _damageOnTouch; } }
+
     protected Collider _damageAreaCollider;
     protected bool _attackInProgress = false;
     protected Color _gizmosColor;

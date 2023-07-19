@@ -54,7 +54,14 @@ public class GameManager : PersistentSingleton<GameManager>
         if (UIManager.Instance == null) { return; }
         if (EnemyCount <= 0)
         {
-            UIManager.Instance.SetVictoryScreen(true);
+            if (CurrentSceneIndex + 1 == SceneManager.sceneCountInBuildSettings)
+            {
+                UIManager.Instance.SetVictoryScreen(true);
+            }
+            else
+            {
+                NextScene();
+            }
         }
 
         UIManager.Instance.UpdateRemainingEnemies(EnemyCount);
